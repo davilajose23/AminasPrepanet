@@ -1,0 +1,37 @@
+
+{"preguntas":[
+    {
+    	"pregunta":"Metalamina", 
+    	"respuesta1":"amina2.png",
+    	"respuesta2":"amina2.png",
+    	"respuesta3":"amina2.png",
+    	"respuesta4":"amina2.png",
+    	"correcta":1
+    },
+    {
+        "pregunta":"Metalamina222", 
+        "respuesta1":"amina2.png",
+        "respuesta2":"amina2.png",
+        "respuesta3":"amina2.png",
+        "respuesta4":"amina2.png",
+        "correcta":1
+    },
+    {
+        "pregunta":"Metalamina333", 
+        "respuesta1":"amina2.png",
+        "respuesta2":"amina2.png",
+        "respuesta3":"amina2.png",
+        "respuesta4":"amina2.png",
+        "correcta":1
+    },
+    {
+        "pregunta":"Metalamina444", 
+        "respuesta1":"amina2.png",
+        "respuesta2":"amina2.png",
+        "respuesta3":"amina2.png",
+        "respuesta4":"amina2.png",
+        "correcta":1
+    }
+
+    
+]}

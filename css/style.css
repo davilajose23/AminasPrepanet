@@ -1,0 +1,59 @@
+.tabs .indicator {
+    background-color: #2196f3;
+    color: #2196f3;
+}
+
+.tabs .tab a:hover {
+  color: #2196f3;
+}
+
+ul.tabs > li.tab > a.active {
+	color: #757575;
+}
+
+.pagination li.active {
+	background-color: #2196f3;
+}
+
+ul.tabs > li.tab > a{
+	color: #757575;
+}
+
+
+a>div.card{
+	color:#757575;
+}
+
+a>div.card:hover, a>div.card.active{
+	color:#0288d1;
+}
+
+i.icon-red {
+    color: red;
+}
+
+#test2{
+	margin-top: 8px;
+	width: 100%;
+	max-width: none;
+}
+
+.card-content>div.center{
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.chip:hover{
+	cursor: pointer;
+}
+
+.chip.large{
+  font-size: 26px;
+  font-weight: normal;
+}
+
+i.icon-blue {
+    color: blue;
+}
+

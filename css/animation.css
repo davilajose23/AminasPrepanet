@@ -1,0 +1,73 @@
+.animation-demo, .item-grid, .products {
+  /*> .animated{
+   @include scale(1);
+  }*/
+}
+.animation-demo > * {
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: -o-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.animation-demo.animating-in > * {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.animation-demo.animating-out > * {
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
+
+/* #demo style - you can delete it */
+* {
+  box-sizing: border-box;
+}
+
+#demo {
+  text-align: center;
+  margin: 150px auto;
+  width: 80%;
+  position: relative;
+  display: block;
+}
+#demo button {
+  background: #e0e0e0;
+  color: #757575;
+  color: #424242;
+  outline: none;
+  border: none;
+  padding: .5em 1em;
+}
+#demo button + * {
+  margin-left: 20px;
+}
+#demo ul {
+  list-style: none outside none;
+  padding: 0;
+  margin: 10px -15px;
+  width: 100%;
+}
+#demo ul > * {
+  background-color: #29B6F6;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  height: 100px;
+  margin: 5px;
+  overflow: hidden;
+  position: relative;
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  width: 100px;
+}

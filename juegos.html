@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+
+  <script src="js/jquery-3.1.0.js" type="text/javascript"></script>
+  <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
+</head>
+
+<body class="grey lighten-4">
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper blue">
+        <a href="#!" class="brand-logo"><img class="responsive-img center" src="img/logo.png" width="250px"></a>
+        <a href="#!" class="brand-logo right"><img class="responsive-img " src="img/logoPrepanet.png" width="230px"></a>
+        <ul class="right hide-on-med-and-down">
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class=" container">
+   <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a target="_self" href="index.html">Información</a></li>
+        <li class="tab col s3"><a target="_self" class="active" href="juegos.html">Juegos</a></li>
+        <li class="tab col s3"><a target="_self" href="quiz.html">Quiz</a></li>
+        <!-- <li class="tab col s3"><a target="_self"  href="about.html">Acerca de</a></li> -->
+      </ul>
+    </div>
+
+
+    <div id="test2" class="col s12">
+
+
+
+      <div class="col s12 m4 "> 
+        <a href="#" >
+          <div class="card grey lighten-5 waves-effect hoverable active " >
+            <div class="card-content ">
+              <span class="card-title">Adivina el nombre</span>
+              <p>Juego uno en el que podrás hacer esto y esto </p>
+
+            </div>
+
+          </div>
+        </a>
+      </div>
+
+      <div class="col s12 m4 "> 
+        <a href="#">
+          <div class="card grey lighten-5 waves-effect hoverable ">
+            <div class="card-content ">
+              <span class="card-title">Adivina la estructura</span>
+              <p>Juego dos en el que podras hacer esto y esto </p>
+
+            </div>
+
+          </div>
+        </a>
+      </div>
+
+      <div class="col s12 m4 "> 
+        <a href="#">
+          <div class="card grey lighten-5 waves-effect hoverable">
+            <div class="card-content ">
+              <span class="card-title">Adivina la estructura</span>
+              <p>Juego tres en el que podras hacer esto y esto </p>
+
+            </div>
+
+          </div>
+        </a>
+      </div>
+
+
+
+
+
+    </div>
+
+    <!-- Juego 1 HTML -->
+    <div class="col s12 m12 "> 
+      <div class="card grey lighten-5">
+        <div class="card-content ">
+
+          <p><b>Score:</b> <span id="juego1Score"></span><span class="right" id="juego1Vidas"></span></p>
+
+          <br>
+          <div class="center">
+
+
+
+            <div class="chip large" id="juego1Pregunta"></div>
+            
+            
+            <div class="row ">
+              <div class="col s12 m6">
+                <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="1">
+                  <img class="responsive-img center" src="" >
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="2">
+                  <img class="responsive-img center" src="" >
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="3">
+                  <img class="responsive-img center" src="" >
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="4">
+                  <img class="responsive-img center" src="" >
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+
+          <br>
+          <br>
+          
+          <button class="btn waves-effect waves-light right teal" type="submit" name="action" id="juego1Continuar" style="display: none;">Continuar
+
+          </button>
+          
+
+          <br>
+          <br>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+
+    <div class="col s12 m12 "> 
+
+      <div class="card grey lighten-5">
+        <div class="card-content ">
+
+          <p><b>Score:</b> 100<span class="right"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i></span></p>
+
+          <br>
+          <br>
+          <div class="center">
+            <img class="responsive-img center" src="img/amina2.png">
+
+            <br>
+            <br>
+            <div class="chip hoverable pink white-text">metil</div>
+            <div class="chip hoverable green white-text">amina</div>
+            <hr>
+            <br>
+            <br>
+
+            <div class="chip hoverable">propil</div>
+            <div class="chip hoverable">iso</div>
+            <div class="chip hoverable">butil</div>
+            <div class="chip hoverable">propil</div>
+            <div class="chip hoverable">iso</div>
+            <div class="chip hoverable">butil</div>
+            
+
+            
+            
+          </div>
+          <br>
+          <br>
+          <button class="btn waves-effect waves-light left teal" type="submit" name="action">Saltar
+          </button>
+
+          
+
+          <button data-target="modal1" class="btn waves-effect waves-light right green " type="submit" name="action" >Evaluar 
+
+          </button>
+
+          <br>
+          <br>
+
+        </div>
+
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Modal Structure -->
+<div id="juego1TopScore" class="modal">
+  <div class="modal-content center">
+    <h4>Puntiación Máxima: <br> <span id="juego1TopScore">100</span> </h4>
+    <p>Very Good</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Continuar</a>
+  </div>
+</div>
+
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+
+
+<script>
+
+  var preguntas;
+  var contadorPreguntas = 1 ;
+  var juego1Score = 0;
+  var juego1Vidas = 5;
+  var numPregunta;
+  var enEspera = false;
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+      starting_top: '4%', // Starting top style attribute
+      ending_top: '10%', // Ending top style attribute
+      ready: function() {  }, // Callback for Modal open
+      complete: function() {  } // Callback for Modal close
+    });
+
+    cargaPreguntaInicial(0);
+    contadorPreguntas = 0;
+    $("#juego1Continuar").hide();
+
+  });
+</script>
+
+<!-- Juego1 -->
+<script>
+  
+
+
+  $(".juego1Respuesta").click(function (){
+
+    if(!enEspera){
+      evalua(numPregunta, $(this).data("num") );
+    }
+    
+
+  });
+
+  $("#juego1Continuar").click(function(){
+
+    $(this).hide();
+
+    enEspera = false;
+    reloadPregunta();
+  });
+
+
+  function evalua(num,resp){
+
+
+    if (preguntas[num]['correcta'] == resp){
+      $(".juego1Respuesta").eq(preguntas[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
+      juego1Score += 10;
+      Materialize.toast('Respuesta Correcta', 4000);
+      $.playSound("sounds/correct");
+      reloadPregunta();
+
+    }else{
+      juego1Vidas --;
+      Materialize.toast('Sigue Intentando', 4000); 
+      $.playSound("sounds/error");
+      //quita vidas
+      $("#juego1Vidas").children()[0].remove();
+
+      //cambia los colores a las respuestas
+      
+      $(".juego1Respuesta").each(function() {
+        $( this ).removeClass( "blue-grey lighten-1" ).addClass("red incorrecta");
+      });
+
+      $(".juego1Respuesta").eq(preguntas[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
+
+      //muestra el boton de continuar
+      $("#juego1Continuar").show();
+
+      if (juego1Vidas == 0){
+        $('#juego1TopScore').openModal();
+      }
+      enEspera = true;
+
+    }
+    contadorPreguntas ++;
+
+  }
+
+  function reloadPregunta(){
+
+    $(".juego1Respuesta").each(function() {
+        $( this ).removeClass( "red incorrecta green" ).addClass( "blue-grey lighten-1");
+    });
+
+    numPregunta = Math.floor((Math.random() * preguntas.length) + 0);
+
+    p = preguntas[numPregunta];
+    $("#juego1Pregunta").html(p['pregunta']);
+    $(".juego1Respuesta > img").eq(0).attr('src', 'img/juego1/' + p['respuesta1']);
+    $(".juego1Respuesta > img").eq(1).attr('src', 'img/juego1/' + p['respuesta2']);
+    $(".juego1Respuesta > img").eq(2).attr('src', 'img/juego1/' + p['respuesta3']);
+    $(".juego1Respuesta > img").eq(3).attr('src', 'img/juego1/' + p['respuesta4']);
+
+    $("#juego1Score").html(juego1Score);
+  }
+
+  function cargaPreguntaInicial(){
+
+    $.ajax({
+      url: 'data/juego1.json',
+      type: 'GET',
+      datatype: 'json',
+      success: function(data){
+
+        preguntas = data['preguntas'];
+
+        numPregunta = Math.floor((Math.random() * preguntas.length) + 0);
+        p = preguntas[numPregunta];
+        $("#juego1Pregunta").html(p['pregunta']);
+
+        $(".juego1Respuesta > img").eq(0).attr('src', 'img/juego1/' + p['respuesta1']);
+        $(".juego1Respuesta > img").eq(1).attr('src', 'img/juego1/' + p['respuesta2']);
+        $(".juego1Respuesta > img").eq(2).attr('src', 'img/juego1/' + p['respuesta3']);
+        $(".juego1Respuesta > img").eq(3).attr('src', 'img/juego1/' + p['respuesta4']);
+
+        $("#juego1Score").html(juego1Score);
+
+        for(var i = 0; i < juego1Vidas ; i++){
+          $("#juego1Vidas").append('<i class="material-icons icon-red">favorite</i>');
+        }
+
+
+      },
+      error: function(errorMsg){
+
+        console.log("nojala");
+      }
+
+    });
+
+
+  };
+
+
+</script>
+</body>
+</html>
