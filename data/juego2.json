@@ -1,0 +1,38 @@
+{"preguntas":[
+    {
+    	"pregunta":"pregunta1.png", 
+    	"tags" :[ 
+    		{"tag" : "3-"},
+    		{"tag" : "4-"},
+    		{"tag" : "(2-aminoetil)"},
+    		{"tag" : "metil"},
+    		{"tag" : "bencenol"},
+    		{"tag" : "(2-aminometil)"},
+    		{"tag" : "benceno"},
+    		{"tag" : "ol"},
+    		{"tag" : "2-"},
+    		{"tag" :  "diol"},
+    		{"tag" :  "-1"}
+    	],
+    	"respuesta" : ["4-", "(2-aminoetil)", "benceno", "-1", "2-", "diol"],
+    	"tipo" : "imagen"
+    },
+    {
+    	"pregunta":"pregunta1.png", 
+    	"tags" :[ 
+    		{"tag" : "3-"},
+    		{"tag" : "4-"},
+    		{"tag" : "(2-aminoetil)"},
+    		{"tag" : "metil"},
+    		{"tag" : "bencenol"},
+    		{"tag" : "(2-aminometil)"},
+    		{"tag" : "benceno"},
+    		{"tag" : "ol"},
+    		{"tag" : "2-"},
+    		{"tag" :  "diol"},
+    		{"tag" :  "-1"}
+    	],
+    	"respuesta" : ["4-", "(2-aminoetil)", "benceno", "-1", "2-", "diol"],
+    	"tipo" : "imagen"
+    }
+]}

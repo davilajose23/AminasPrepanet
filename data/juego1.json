@@ -1,36 +1,116 @@
 
 {"preguntas":[
     {
-    	"pregunta":"Metalamina", 
-    	"respuesta1":"amina2.png",
-    	"respuesta2":"amina2.png",
-    	"respuesta3":"amina2.png",
-    	"respuesta4":"amina2.png",
+    	"pregunta":"Estructura condensada de Ácido 2-amino- 3-metilpentanoico:", 
+    	"respuesta1":"CH 3 CH 2 CH( CH 3 )CH( NH 2 )COOH ",
+    	"respuesta2":"NH 2 CH 2 CH 2 CH 2 NH 2",
+    	"respuesta3":"CH 3 CH( NH 2 )COOH",
+    	"respuesta4":"CH 3 CH( CH 3 )CH(NH 2 )COOH",
     	"correcta":1
     },
     {
-        "pregunta":"Metalamina222", 
-        "respuesta1":"amina2.png",
-        "respuesta2":"amina2.png",
-        "respuesta3":"amina2.png",
-        "respuesta4":"amina2.png",
+        "pregunta":"¿Cuál es el nombre IUPAC de la siguiente estructura? <br> OHCH 2 CH(NH 2 )COOH", 
+        "respuesta1":"Ácido 2-aminopropanoico",
+        "respuesta2":"Ácido 2-amino- 3-hidroxipropanoico",
+        "respuesta3":"N,N’-bis(3- aminopropil)butano-1,4- diamina",
+        "respuesta4":"Ácido 2-amino- 3-metilbutanoico",
+        "correcta":2
+    },
+    {
+        "pregunta":"Estructura condensada de: 1,5-pentanodiamina", 
+        "respuesta1": "NH 2 CH 2 CH 2 CH 2 CH 2 NH 2",
+        "respuesta2": "CH 3 CH( CH 3 )CH 2 CH( NH 2 )COOH",
+        "respuesta3": "NH 2 CH 2 CH 2 CH 2 CH 2 CH 2 CH 2 NH 2",
+        "respuesta4": "NH 2 CH 2 CH 2 CH 2 CH 2 CH 2 NH 2",
+        "correcta":4
+    },
+    {
+        "pregunta":"Estructura condensada de: Ácido 2-aminopropanoico", 
+        "respuesta1": "CH 3 CH 2 CH(NH 2 )COOH",
+        "respuesta2": "CH 3 CH 2 CH(NH 2 )COOH",
+        "respuesta3": "CH 3 CH( NH 2 )COOH",
+        "respuesta4": "Imagen",
+        "correcta":3
+    },
+    {
+        "pregunta":"Estructura condensada de: Ácido 2-aminoetanoico", 
+        "respuesta1":"NH 2 CH 2 CH 2 CH 2 CH 2 CH 2 CH 3",
+        "respuesta2":"NH 2 CH 2 CH 2 CH 2 CH 2 CH 2 NH 2",
+        "respuesta3":"HOOCCH 2 NH 2",
+        "respuesta4":"HOOCCH 2 CH 2 NH 2",
+        "correcta":3
+    },
+    {
+        "pregunta":"Escribe el nombre IUPAC de la siguiente estructura: <br> HOOCCH 2 NH 2", 
+        "respuesta1":"Ácido 2-amino- 3-metilpentanoico",
+        "respuesta2":"Ácido 2-aminoetanoico",
+        "respuesta3":"Ácido 2-amino- 3-hidroxipropanoico",
+        "respuesta4":"Ácido 2-amino- 4-carbamoilbutanoico",
+        "correcta":4
+    },
+    {
+        "pregunta": "Nombre de la IUPAC de la leucina", 
+        "respuesta1": "Ácido 2-amino- 5-(diaminometilidenoamino)pentanoico",
+        "respuesta2": "Ácido 2,6-diaminohexanoico",
+        "respuesta3": "Ácido 2-amino- 4-metilpentanoico",
+        "respuesta4": "Ácido 2-amino- 4-carbamoilbutanoico",
+        "correcta":3
+    },
+    {
+        "pregunta":"¿Cuál es el nombre trivial de la siguiente aminoácido?: <br>NH 2 CH 2 CH 2 CH 2 CH 2 CH(NH 2 )COOH", 
+        "respuesta1":"Alanina",
+        "respuesta2":"Serina",
+        "respuesta3":"Arginina",
+        "respuesta4":"Lisina",
+        "correcta":4
+    },
+    {
+        "pregunta":"Nombre de IUPAC de lisina", 
+        "respuesta1":"Ciclohexamina",
+        "respuesta2":"1,3-propanodiamina",
+        "respuesta3":"Ácido 2,6-diaminohexanoico",
+        "respuesta4":"Ácido 2-amino- 4-metilpentanoico",
+        "correcta":3
+    },
+    {
+        "pregunta":"¿Cuál es el nombre IUPAC de la siguiente estructura? <br> NH 2 CH 2 CH 2 CH 2 NH 2", 
+        "respuesta1":"1,3-propanodiamina",
+        "respuesta2":"1,3-butanodiamina",
+        "respuesta3":"1,3-propanoamina",
+        "respuesta4":"1-propanodiamina",
         "correcta":1
     },
     {
-        "pregunta":"Metalamina333", 
-        "respuesta1":"amina2.png",
-        "respuesta2":"amina2.png",
-        "respuesta3":"amina2.png",
-        "respuesta4":"amina2.png",
-        "correcta":1
+        "pregunta":"Nombre IUPAC de la siguiente estructura condensada: <br> NH 2 CH 2 CH 2 CHCH 2 CH 3 (Falta)", 
+        "respuesta1":"3-bromopentamina",
+        "respuesta2":"3-bromo- 1-hexamina",
+        "respuesta3":"3-bromo- 1-pentamina",
+        "respuesta4":"3-fluoro- 1-pentamina",
+        "correcta":3
     },
     {
-        "pregunta":"Metalamina444", 
-        "respuesta1":"amina2.png",
-        "respuesta2":"amina2.png",
-        "respuesta3":"amina2.png",
-        "respuesta4":"amina2.png",
-        "correcta":1
+        "pregunta":"Nombre IUPAC de la siguiente molécula: <br> (NH 2 CH(NH 2 )NH)CH 2 CH 2 CH 2 CH(NH 2 )COOH", 
+        "respuesta1":"Ácido 2-amino- 4-carbamoilbutanoico",
+        "respuesta2":"Ácido 2,6-diaminohexanoico",
+        "respuesta3":"Ácido 2-amino- 1,5-(diaminometilidenoamino)pentanoico",
+        "respuesta4":"Ácido 2-amino- 5-(diaminometilidenoamino)pentanoico",
+        "correcta":4
+    },
+    {
+        "pregunta":"Nombre trivial de la siguiente molécula: <br> Ácido 2-aminoetanoico", 
+        "respuesta1":"Alanina",
+        "respuesta2":"Espermidina",
+        "respuesta3":"Glicina",
+        "respuesta4":"Valina",
+        "correcta":3
+    },
+    {
+        "pregunta":"Nombre IUPAC de la siguiente molécula: <br> SHCH 2 CH(NH 2 )COOH", 
+        "respuesta1":"Ácido 2-amino- 3-sulfanildipropanoico",
+        "respuesta2":"Ácido 3-amino- 1-sulfanilpropanoico",
+        "respuesta3":"Ácido 2-amino- 3-sulfanilpropanoico",
+        "respuesta4":"Ácido 2-amino- 3-sulfanilpropanodioico",
+        "correcta":3
     }
 
     

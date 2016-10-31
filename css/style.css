@@ -57,3 +57,14 @@ i.icon-blue {
     color: blue;
 }
 
+.hov{
+	cursor: pointer;
+}
+
+.chip .close1 {
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 8px;
+}

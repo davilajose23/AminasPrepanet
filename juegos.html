@@ -14,6 +14,7 @@
 
   <script src="js/jquery-3.1.0.js" type="text/javascript"></script>
   <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
+  <script src="js/jquery-ui.js" type="text/javascript"></script>
 </head>
 
 <body class="grey lighten-4">
@@ -41,38 +42,38 @@
     </div>
 
 
-    <div id="test2" class="col s12">
+    <div id="test2" class="col s12" >
 
 
 
-      <div class="col s12 m4 "> 
-        <a href="#" >
+      <div class="col s12 m4 " id="tab1"> 
+        
           <div class="card grey lighten-5 waves-effect hoverable active " >
             <div class="card-content ">
               <span class="card-title">Adivina el nombre</span>
-              <p>Juego uno en el que podrás hacer esto y esto </p>
+              <p>Juego uno en el que deberas contestar la respuesta correcta de las opciones  </p>
 
             </div>
 
           </div>
-        </a>
+        
       </div>
 
-      <div class="col s12 m4 "> 
-        <a href="#">
+      <div class="col s12 m4 " id="tab2"> 
+        
           <div class="card grey lighten-5 waves-effect hoverable ">
             <div class="card-content ">
               <span class="card-title">Adivina la estructura</span>
-              <p>Juego dos en el que podras hacer esto y esto </p>
+              <p>Juego dos en el que deberas armar el nombre de una estructura</p>
 
             </div>
 
           </div>
-        </a>
+        
       </div>
 
       <div class="col s12 m4 "> 
-        <a href="#">
+        
           <div class="card grey lighten-5 waves-effect hoverable">
             <div class="card-content ">
               <span class="card-title">Adivina la estructura</span>
@@ -81,7 +82,7 @@
             </div>
 
           </div>
-        </a>
+        
       </div>
 
 
@@ -91,11 +92,11 @@
     </div>
 
     <!-- Juego 1 HTML -->
-    <div class="col s12 m12 "> 
+    <div class="col s12 m12 " id ="juego1"> 
       <div class="card grey lighten-5">
         <div class="card-content ">
 
-          <p><b>Score:</b> <span id="juego1Score"></span><span class="right" id="juego1Vidas"></span></p>
+          <p> <span class="hov"><i class="material-icons" id = "juego1Sound" >volume_up</i></span>  <b>Score:</b> <span id="juego1Score"></span><span class="right" id="juego1Vidas"></span></p>
 
           <br>
           <div class="center">
@@ -109,6 +110,7 @@
               <div class="col s12 m6">
                 <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="1">
                   <img class="responsive-img center" src="" >
+                  <p></p>
                 </div>
               </div>
               <div class="col s12 m6">
@@ -154,7 +156,7 @@
     <br>
     <br>
 
-    <div class="col s12 m12 "> 
+    <div class="col s12 m12 " id ="juego2"> 
 
       <div class="card grey lighten-5">
         <div class="card-content ">
@@ -163,31 +165,28 @@
 
           <br>
           <br>
-          <div class="center">
-            <img class="responsive-img center" src="img/amina2.png">
+          <div class="center" id="preguntaJuego2">
+            <img class="responsive-img center" src="">
 
             <br>
             <br>
-            <div class="chip hoverable pink white-text">metil</div>
-            <div class="chip hoverable green white-text">amina</div>
+            <div id ="selectedChips">
+             
+
+            </div>
+            
             <hr>
             <br>
-            <br>
-
-            <div class="chip hoverable">propil</div>
-            <div class="chip hoverable">iso</div>
-            <div class="chip hoverable">butil</div>
-            <div class="chip hoverable">propil</div>
-            <div class="chip hoverable">iso</div>
-            <div class="chip hoverable">butil</div>
-            
+           
+            <div id="unselectedChips">
+            </div>
 
             
             
           </div>
           <br>
           <br>
-          <button class="btn waves-effect waves-light left teal" type="submit" name="action">Saltar
+          <button class="btn waves-effect waves-light left teal" type="submit" name="action" id="salarPreguntaJuego2">Saltar
           </button>
 
           
@@ -236,11 +235,13 @@
 <script>
 
   var preguntas;
+  var preguntasJuego2;
   var contadorPreguntas = 1 ;
   var juego1Score = 0;
   var juego1Vidas = 5;
   var numPregunta;
   var enEspera = false;
+  var sonido = true;
   $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal({
@@ -257,8 +258,40 @@
     cargaPreguntaInicial(0);
     contadorPreguntas = 0;
     $("#juego1Continuar").hide();
+    $("#juego1").show();
+    $("#juego2").hide();
 
   });
+
+  $("#tab1").click(function(){
+
+    
+    $("#juego1").show();
+    $("#juego2").hide();
+
+
+  });
+
+   $("#tab2").click(function(){
+
+    $("#juego1").hide();
+    $("#juego2").show();
+    
+
+  });
+
+   $("#juego1Sound").click(function(){
+
+      if(sonido){
+        $(this).html("volume_off");
+      }else{
+        $(this).html("volume_up");
+      }
+      sonido = !sonido;
+
+   });
+
+
 </script>
 
 <!-- Juego1 -->
@@ -291,18 +324,24 @@
       $(".juego1Respuesta").eq(preguntas[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
       juego1Score += 10;
       Materialize.toast('Respuesta Correcta', 4000);
-      $.playSound("sounds/correct");
+      if(sonido){
+        $.playSound("sounds/correct");
+      }
       reloadPregunta();
 
     }else{
+
       juego1Vidas --;
       Materialize.toast('Sigue Intentando', 4000); 
-      $.playSound("sounds/error");
+      if(sonido){
+        $.playSound("sounds/error");
+      }
+      
+
       //quita vidas
       $("#juego1Vidas").children()[0].remove();
 
       //cambia los colores a las respuestas
-      
       $(".juego1Respuesta").each(function() {
         $( this ).removeClass( "blue-grey lighten-1" ).addClass("red incorrecta");
       });
@@ -314,6 +353,7 @@
 
       if (juego1Vidas == 0){
         $('#juego1TopScore').openModal();
+        reset();
       }
       enEspera = true;
 
@@ -332,10 +372,17 @@
 
     p = preguntas[numPregunta];
     $("#juego1Pregunta").html(p['pregunta']);
+
+    $(".juego1Respuesta").eq(0).html(p['respuesta1']);
+    $(".juego1Respuesta").eq(1).html(p['respuesta2']);
+    $(".juego1Respuesta").eq(2).html(p['respuesta3']);
+    $(".juego1Respuesta").eq(3).html(p['respuesta4']);
+    /*
     $(".juego1Respuesta > img").eq(0).attr('src', 'img/juego1/' + p['respuesta1']);
     $(".juego1Respuesta > img").eq(1).attr('src', 'img/juego1/' + p['respuesta2']);
     $(".juego1Respuesta > img").eq(2).attr('src', 'img/juego1/' + p['respuesta3']);
     $(".juego1Respuesta > img").eq(3).attr('src', 'img/juego1/' + p['respuesta4']);
+    */
 
     $("#juego1Score").html(juego1Score);
   }
@@ -354,11 +401,17 @@
         p = preguntas[numPregunta];
         $("#juego1Pregunta").html(p['pregunta']);
 
+        $(".juego1Respuesta").eq(0).html(p['respuesta1']);
+        $(".juego1Respuesta").eq(1).html(p['respuesta2']);
+        $(".juego1Respuesta").eq(2).html(p['respuesta3']);
+        $(".juego1Respuesta").eq(3).html(p['respuesta4']);
+
+        /*
         $(".juego1Respuesta > img").eq(0).attr('src', 'img/juego1/' + p['respuesta1']);
         $(".juego1Respuesta > img").eq(1).attr('src', 'img/juego1/' + p['respuesta2']);
         $(".juego1Respuesta > img").eq(2).attr('src', 'img/juego1/' + p['respuesta3']);
         $(".juego1Respuesta > img").eq(3).attr('src', 'img/juego1/' + p['respuesta4']);
-
+        */
         $("#juego1Score").html(juego1Score);
 
         for(var i = 0; i < juego1Vidas ; i++){
@@ -374,9 +427,93 @@
 
     });
 
+  };
+
+  function reset(){
+    
+    juego1Score = 0;
+    juego1Vidas = 5;
+    enEspera = false;
+
+    cargaPreguntaInicial(0);
+    reloadPregunta();
+    contadorPreguntas = 0;
+    $("#juego1Continuar").hide();
 
   };
 
+
+</script>
+<!-- Juego 2 -->
+<script>
+  //$('.chips').material_chip();
+ 
+
+  var colores = ["pink", "green", "red", "blue", "indigo", "teal", "cyan",  "light-blue", "light-green", "orange", "amber", "deep-orange", "blue-grey"];
+  
+  $(document).on('click',".chip-unselected",function(){
+    console.log("unselect");
+    //console.log($(this).text());
+    var indexColor =  Math.floor((Math.random() * colores.length) + 0);
+    $("#selectedChips").append('<div class="chip hoverable ' + colores[indexColor] +' white-text chip-selected"><span class="dataChip">' + $(this).text()  + '</span><i class="close1 material-icons">close</i></div>');
+    $(this).remove();
+  });
+
+  $(document).on('click',".chip-selected",function(){
+
+    console.log("selected");
+    //$("#unselectedChips").append('<div class="chip hoverable chip-unselected">' + propil + '</div>');
+    var data_text = $(this).children("span").text();
+    $("#unselectedChips").append('<div class="chip hoverable chip-unselected">' + data_text + '</div>');
+
+    $(this).remove();
+  });
+
+  function getDataJuego2(){
+    $.ajax({
+          url: 'data/juego2.json',
+          type: 'GET',
+          datatype: 'json',
+          success: function(data){
+            preguntasJuego2 = data['preguntas'];
+            cargaPreguntasJuego2();
+          },
+          error: function(errorMsg){
+            console.log("Error in juego2.json");
+          }
+        });
+
+  }
+  
+  
+  function cargaPreguntasJuego2(){
+   
+    $("#selectedChips").html("");
+    $("#unselectedChips").html("");
+
+    var rand = Math.floor((Math.random() * preguntasJuego2.length) + 0);
+    var tags = preguntasJuego2[rand].tags;
+
+    $("#preguntaJuego2 >img").attr('src', 'img/juego2/' + preguntasJuego2[rand].pregunta);
+
+    $.each(tags, function(i, val){
+       //console.log(val.tag);
+       $("#unselectedChips").append('<div class="chip hoverable chip-unselected">' + val.tag + '</div>');
+    });
+
+  }
+
+  $("#salarPreguntaJuego2").click(function(){
+
+    cargaPreguntasJuego2();
+
+  });
+
+  getDataJuego2();
+  
+  $("#selectedChips").sortable();
+  $( "#selectedChips" ).disableSelection();
+  
 
 </script>
 </body>
