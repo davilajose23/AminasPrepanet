@@ -68,3 +68,9 @@ i.icon-blue {
     line-height: 32px;
     padding-left: 8px;
 }
+
+#juego1Vidas > i {
+  -webkit-animation-duration: 1.6s;
+  /*-webkit-animation-delay: 2s; */
+  /*-webkitAnimationEnd-animation-iteration-count: infinite;*/
+}

@@ -8,13 +8,15 @@
 
   <link type="text/css" rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" href="css/animate.min.css">
+
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta charset="UTF-8">
 
   <script src="js/jquery-3.1.0.js" type="text/javascript"></script>
   <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
-  <script src="js/jquery-ui.js" type="text/javascript"></script>
+  <script src="js/jquery-ui.min.js" type="text/javascript"></script>
 </head>
 
 <body class="grey lighten-4">
@@ -22,8 +24,8 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper blue">
-        <a href="#!" class="brand-logo"><img class="responsive-img center" src="img/logo.png" width="250px"></a>
-        <a href="#!" class="brand-logo right"><img class="responsive-img " src="img/logoPrepanet.png" width="230px"></a>
+        <a href="#!" class="brand-logo left"><img class="responsive-img center" src="img/logo.png" width="250px"></a>
+        <a href="#!" class="brand-logo right hide-on-small-only"><img class="responsive-img " src="img/logoPrepanet.png" width="230px"></a>
         <ul class="right hide-on-med-and-down">
 
         </ul>
@@ -46,25 +48,22 @@
 
 
 
-      <div class="col s12 m4 " id="tab1"> 
+      <div class="col s12 m4 animated fadeIn" id="tab1"> 
         
           <div class="card grey lighten-5 waves-effect hoverable active " >
             <div class="card-content ">
               <span class="card-title">Adivina el nombre</span>
-              <p>Juego uno en el que deberas contestar la respuesta correcta de las opciones  </p>
-
             </div>
 
           </div>
         
       </div>
 
-      <div class="col s12 m4 " id="tab2"> 
+      <div class="col s12 m4 animated fadeIn" id="tab2"> 
         
           <div class="card grey lighten-5 waves-effect hoverable ">
             <div class="card-content ">
               <span class="card-title">Adivina la estructura</span>
-              <p>Juego dos en el que deberas armar el nombre de una estructura</p>
 
             </div>
 
@@ -72,12 +71,11 @@
         
       </div>
 
-      <div class="col s12 m4 "> 
+      <div class="col s12 m4 animated fadeIn"> 
         
           <div class="card grey lighten-5 waves-effect hoverable">
             <div class="card-content ">
-              <span class="card-title">Adivina la estructura</span>
-              <p>Juego tres en el que podras hacer esto y esto </p>
+              <span class="card-title">Clasifica la estructura</span>
 
             </div>
 
@@ -92,11 +90,11 @@
     </div>
 
     <!-- Juego 1 HTML -->
-    <div class="col s12 m12 " id ="juego1"> 
+    <div class="col s12 m12  animated zoomIn" id ="juego1"> 
       <div class="card grey lighten-5">
         <div class="card-content ">
 
-          <p> <span class="hov"><i class="material-icons" id = "juego1Sound" >volume_up</i></span>  <b>Score:</b> <span id="juego1Score"></span><span class="right" id="juego1Vidas"></span></p>
+          <p> <span class="hov"><i class="material-icons" id = "juego1Sound" >volume_up</i></span>  <b>Score:</b> <span id="juego1Score"></span><span class="right" id="juego1Vidas"> <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Selecciona la respuesta correcta">info</i></span></p>
 
           <br>
           <div class="center">
@@ -133,11 +131,9 @@
             
           </div>
 
-
-          <br>
           <br>
           
-          <button class="btn waves-effect waves-light right teal" type="submit" name="action" id="juego1Continuar" style="display: none;">Continuar
+          <button class="btn waves-effect waves-light right teal animated pulse" type="submit" name="action" id="juego1Continuar" style="display: none;">Continuar
 
           </button>
           
@@ -156,12 +152,12 @@
     <br>
     <br>
 
-    <div class="col s12 m12 " id ="juego2"> 
+    <div class="col s12 m12  animated fadeInUp" id ="juego2"> 
 
       <div class="card grey lighten-5">
         <div class="card-content ">
 
-          <p><b>Score:</b> 100<span class="right"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i></span></p>
+          <p><b>Score:</b> <span id="juego2Score">0</span><span class="right"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i> <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-html="true" data-tooltip="De las opciones disponibles forma la respuesta <br>(el orden importa)">info</i></span></p>
 
           <br>
           <br>
@@ -186,12 +182,14 @@
           </div>
           <br>
           <br>
-          <button class="btn waves-effect waves-light left teal" type="submit" name="action" id="salarPreguntaJuego2">Saltar
+          <!--
+          <button class="btn waves-effect waves-light left teal" type="submit" name="action" id="saltarPreguntaJuego2">Saltar
           </button>
+          -->
 
           
 
-          <button data-target="modal1" class="btn waves-effect waves-light right green " type="submit" name="action" >Evaluar 
+          <button class="btn waves-effect waves-light right green " id="evaluarJuego2" >Evaluar 
 
           </button>
 
@@ -216,8 +214,8 @@
 <!-- Modal Structure -->
 <div id="juego1TopScore" class="modal">
   <div class="modal-content center">
-    <h4>Puntiación Máxima: <br> <span id="juego1TopScore">100</span> </h4>
-    <p>Very Good</p>
+    <h4>Puntuación Máxima: <br> <span id="juego1TopScore">100</span> </h4>
+    
   </div>
   <div class="modal-footer">
     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Continuar</a>
@@ -303,6 +301,8 @@
 
     if(!enEspera){
       evalua(numPregunta, $(this).data("num") );
+    }else{
+      console.log("falso, espera activa");
     }
     
 
@@ -339,7 +339,14 @@
       
 
       //quita vidas
-      $("#juego1Vidas").children()[0].remove();
+      
+
+      $("#juego1Vidas").children().eq(0).addClass("fadeOut").delay(1600).queue(function(next){
+        //$(this).removeClass("bounceOut");
+        $("#juego1Vidas").children()[0].remove();
+        next();
+      });
+
 
       //cambia los colores a las respuestas
       $(".juego1Respuesta").each(function() {
@@ -351,11 +358,14 @@
       //muestra el boton de continuar
       $("#juego1Continuar").show();
 
-      if (juego1Vidas == 0){
-        $('#juego1TopScore').openModal();
-        reset();
-      }
       enEspera = true;
+
+      if (juego1Vidas == 0){
+        reset();
+        $('#juego1TopScore').openModal();
+        
+      }
+      
 
     }
     contadorPreguntas ++;
@@ -363,6 +373,12 @@
   }
 
   function reloadPregunta(){
+
+    $("#juego1").addClass("zoomOut").delay(300).queue(function(next){
+        $(this).removeClass("zoomOut");
+        next();
+    });
+    //
 
     $(".juego1Respuesta").each(function() {
         $( this ).removeClass( "red incorrecta green" ).addClass( "blue-grey lighten-1");
@@ -385,6 +401,7 @@
     */
 
     $("#juego1Score").html(juego1Score);
+    
   }
 
   function cargaPreguntaInicial(){
@@ -415,7 +432,7 @@
         $("#juego1Score").html(juego1Score);
 
         for(var i = 0; i < juego1Vidas ; i++){
-          $("#juego1Vidas").append('<i class="material-icons icon-red">favorite</i>');
+          $("#juego1Vidas").prepend('<i class="material-icons icon-red">favorite</i>');
         }
 
 
@@ -433,12 +450,13 @@
     
     juego1Score = 0;
     juego1Vidas = 5;
-    enEspera = false;
 
     cargaPreguntaInicial(0);
     reloadPregunta();
     contadorPreguntas = 0;
     $("#juego1Continuar").hide();
+
+    enEspera = false;
 
   };
 
@@ -447,7 +465,8 @@
 <!-- Juego 2 -->
 <script>
   //$('.chips').material_chip();
- 
+  var numPreguntaJuego2 = 0;
+  var juego2Score = 0;
 
   var colores = ["pink", "green", "red", "blue", "indigo", "teal", "cyan",  "light-blue", "light-green", "orange", "amber", "deep-orange", "blue-grey"];
   
@@ -487,23 +506,59 @@
   
   
   function cargaPreguntasJuego2(){
+
+    $("#juego2").addClass("fadeOutDown").delay(300).queue(function(next){
+        $(this).removeClass("fadeOutDown");
+        next();
+    });
    
     $("#selectedChips").html("");
     $("#unselectedChips").html("");
 
-    var rand = Math.floor((Math.random() * preguntasJuego2.length) + 0);
-    var tags = preguntasJuego2[rand].tags;
+    numPreguntaJuego2 = Math.floor((Math.random() * preguntasJuego2.length) + 0);
+    var tags = preguntasJuego2[numPreguntaJuego2].tags;
 
-    $("#preguntaJuego2 >img").attr('src', 'img/juego2/' + preguntasJuego2[rand].pregunta);
+    $("#preguntaJuego2 >img").attr('src', 'img/juego2/' + preguntasJuego2[numPreguntaJuego2].pregunta);
 
     $.each(tags, function(i, val){
        //console.log(val.tag);
        $("#unselectedChips").append('<div class="chip hoverable chip-unselected">' + val.tag + '</div>');
     });
 
+    $("#juego2Score").html(juego2Score);
   }
 
-  $("#salarPreguntaJuego2").click(function(){
+  function evaluaJuego2(){
+
+    if (preguntasJuego2[numPreguntaJuego2].respuesta.length != $("#selectedChips").children().length){
+      return false;
+    }
+    for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
+
+        if (preguntasJuego2[numPreguntaJuego2].respuesta[i].tag != $("#selectedChips").children().eq(i).children('span').text())
+          return false;  
+    }
+
+    return true;
+
+  }
+
+  $("#evaluarJuego2").click(function(){
+
+    if (evaluaJuego2()){
+      juego2Score += 10;
+      Materialize.toast('Respuesta Correcta', 4000);
+      cargaPreguntasJuego2();
+
+    }else{
+      Materialize.toast('Respuesta Incorrecta', 4000);
+
+    }
+
+
+  });
+
+  $("#saltarPreguntaJuego2").click(function(){
 
     cargaPreguntasJuego2();
 

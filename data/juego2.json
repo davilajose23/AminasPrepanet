@@ -14,7 +14,14 @@
     		{"tag" :  "diol"},
     		{"tag" :  "-1"}
     	],
-    	"respuesta" : ["4-", "(2-aminoetil)", "benceno", "-1", "2-", "diol"],
+    	"respuesta" : [
+    		{"tag" : "4-"},
+    		{"tag" : "(2-aminoetil)"},
+    		{"tag" : "benceno"},
+    		{"tag" : "-1"},
+    		{"tag" : "2-"},
+    		{"tag" : "diol"}
+    	],
     	"tipo" : "imagen"
     },
     {
@@ -32,7 +39,14 @@
     		{"tag" :  "diol"},
     		{"tag" :  "-1"}
     	],
-    	"respuesta" : ["4-", "(2-aminoetil)", "benceno", "-1", "2-", "diol"],
+    	"respuesta" : [
+    		{"tag" : "4-"},
+    		{"tag" : "(2-aminoetil)"},
+    		{"tag" : "benceno"},
+    		{"tag" : "-1"},
+    		{"tag" : "2-"},
+    		{"tag" : "diol"}
+    	],
     	"tipo" : "imagen"
     }
 ]}
