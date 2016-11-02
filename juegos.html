@@ -409,17 +409,20 @@
   });
 
   $("#juego1Continuar").click(function(){
+    clickJuego1Continuar();
+    
+  });
 
-    $(this).hide();
+  function clickJuego1Continuar(){
+
+    $("#juego1Continuar").hide();
     enEspera = false;
     $("#juego1").addClass("zoomOut").delay(300).queue(function(next){
         $(this).removeClass("zoomOut");
         reloadPregunta();
         next();
     });
-    
-  });
-
+  }
 
   function evalua(num,resp){
 
@@ -659,6 +662,8 @@
       if(e.keyCode == 13 && juegoActivo == 2)
       {
           buttonJuego2();
+      }else if (e.keyCode ==  13 && juegoActivo == 1){
+        clickJuego1Continuar();
       }
   });
 
