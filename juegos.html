@@ -90,6 +90,8 @@
     </div>
 
     <!-- Juego 1 HTML -->
+    
+
     <div class="col s12 m12  animated zoomIn" id ="juego1" style="display: none;"> 
       <div class="card grey lighten-5">
         <div class="card-content ">
@@ -208,6 +210,93 @@
       <br>
     </div>
 
+    <div class="col s12 m12  animated zoomIn" id ="juego3" > 
+
+      <div class="card grey lighten-5">
+        <div class="card-content ">
+
+          <p><b>Score:</b> <span id="juego3Score">0</span><span class="right" id="juego3Vidas"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i> <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-html="true" data-tooltip="Arrastra la imagen a su categoria correspondiente">info</i></span></p>
+
+          <br>
+          <br>
+          <div class="center" id="preguntaJuego3">
+            <h5 id="respuestaJuego2" class="animated fadeIn draggable">algo </h5>
+            <img class="responsive-img center draggable" src="img/juego2/pregunta1.png">
+            
+            <div class="row ">
+              <div class="col s12 m6 droppable">
+                <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="1" >
+                  <img class="responsive-img center" src="" >
+                  <br>
+                  <br>
+                  <p>Tipo 1</p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+              <div class="col s12 m6 droppable">
+                <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="2">
+                  <img class="responsive-img center" src="" >
+                  <br>
+                  <br>
+                  <p>Tipo 2</p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+              <div class="col s12 m6 droppable">
+                <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="3">
+                  <img class="responsive-img center" src="" >
+                  <br>
+                  <br>
+                  <p>Tipo 3</p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+              <div class="col s12 m6 droppable">
+                <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="4">
+                  <img class="responsive-img center" src="" >
+                  <br>
+                  <br>
+                  <p>Tipo 4</p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+            </div>
+            
+
+            
+            
+          </div>
+          <br>
+          <br>
+          <!--
+          <button class="btn waves-effect waves-light left teal" type="submit" name="action" id="saltarPreguntaJuego2">Saltar
+          </button>
+          -->
+
+          
+
+          
+
+          </button>
+
+          <br>
+          <br>
+
+        </div>
+
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
   </div>
 
 </div>
@@ -262,6 +351,7 @@
     
 
   });
+  $("juego3").show();
 
   $("#tab1").click(function(){
 
@@ -636,6 +726,43 @@
   $("#selectedChips").sortable();
   $( "#selectedChips" ).disableSelection();
   
+
+</script>
+
+<script type="text/javascript">
+$(".draggable").draggable
+    ({  
+        revert: 'invalid',
+        
+    });
+
+  $( function() {
+    $( ".draggable" ).draggable();
+
+    $( ".droppable" ).droppable({
+      over: function(event, ui) {
+        
+        $(this).eq(0).children().removeClass("grey")
+                   .addClass("light-blue");
+        
+        ui.draggable.data("current-droppable", $(this));  // Associate.
+    },
+
+    out: function(event, ui) {
+        ui.draggable.removeData("current-droppable");     // Break association.
+        $(this).eq(0).children().removeClass("light-blue")
+                   .addClass("grey");
+    },
+      drop: function( event, ui ) {
+        
+        alert($(this).find('p').html());
+      }
+    });
+
+    
+
+
+  });
 
 </script>
 </body>

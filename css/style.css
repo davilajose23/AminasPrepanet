@@ -75,3 +75,16 @@ i.icon-blue {
   /*-webkitAnimationEnd-animation-iteration-count: infinite;*/
 }
 
+.dashed{
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #616161;
+}
+
+.highlight{
+   background-color: #b3e5fc !important; 
+}
+
+.no-hover{
+  background-color: :  #eeeeee;
+}
