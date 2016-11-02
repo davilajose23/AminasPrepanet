@@ -487,7 +487,7 @@
     console.log("unselect");
     //console.log($(this).text());
     var indexColor =  Math.floor((Math.random() * colores.length) + 0);
-    $("#selectedChips").append('<div class="chip hoverable ' + colores[indexColor] +' white-text chip-selected"><span class="dataChip">' + $(this).text()  + '</span><i class="close1 material-icons">close</i></div>');
+    $("#selectedChips").append('<div class="chip hoverable ' + colores[indexColor] +' white-text chip-selected animated fadeIn"><span class="dataChip">' + $(this).text()  + '</span><i class="close1 material-icons">close</i></div>');
     $(this).remove();
   });
 
@@ -496,7 +496,7 @@
     console.log("selected");
     //$("#unselectedChips").append('<div class="chip hoverable chip-unselected">' + propil + '</div>');
     var data_text = $(this).children("span").text();
-    $("#unselectedChips").append('<div class="chip hoverable chip-unselected">' + data_text + '</div>');
+    $("#unselectedChips").append('<div class="chip hoverable chip-unselected animated fadeIn">' + data_text + '</div>');
 
     $(this).remove();
   });
@@ -535,7 +535,7 @@
 
     $.each(tags, function(i, val){
        //console.log(val.tag);
-       $("#unselectedChips").append('<div class="chip hoverable chip-unselected">' + val.tag + '</div>');
+       $("#unselectedChips").append('<div class="chip hoverable chip-unselected animated fadeIn">' + val.tag + '</div>');
     });
 
     $("#juego2Score").html(juego2Score);
