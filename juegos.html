@@ -450,6 +450,9 @@
       });
 
 
+      
+
+
       //cambia los colores a las respuestas
       $(".juego1Respuesta").each(function() {
         $( this ).removeClass( "blue-grey lighten-1" ).addClass("red incorrecta");
@@ -461,6 +464,8 @@
       $("#juego1Continuar").show();
 
       enEspera = true;
+
+
 
       if (juego1Vidas == 0){
         reset();
@@ -476,7 +481,9 @@
 
   function reloadPregunta(){
 
-    
+    if(juego1Vidas == 1){
+          $("#juego1Vidas").children().eq(0).addClass("flash animated infinite");
+      }
     //
 
     $(".juego1Respuesta").each(function() {

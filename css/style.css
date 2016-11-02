@@ -70,10 +70,11 @@ i.icon-blue {
 }
 
 #juego1Vidas > i {
-  -webkit-animation-duration: 1.6s;
+  -webkit-animation-duration: 1.6s; 
   /*-webkit-animation-delay: 2s; */
   /*-webkitAnimationEnd-animation-iteration-count: infinite;*/
 }
+
 
 .dashed{
   border-style: dashed;
