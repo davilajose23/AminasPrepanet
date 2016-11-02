@@ -2,7 +2,7 @@
 <html>
 <head>
   <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
@@ -90,7 +90,7 @@
     </div>
 
     <!-- Juego 1 HTML -->
-    <div class="col s12 m12  animated zoomIn" id ="juego1"> 
+    <div class="col s12 m12  animated zoomIn" id ="juego1" style="display: none;"> 
       <div class="card grey lighten-5">
         <div class="card-content ">
 
@@ -101,7 +101,7 @@
 
 
 
-            <div class="chip large" id="juego1Pregunta"></div>
+            <h5 class="" id="juego1Pregunta"></h5>
             
             
             <div class="row ">
@@ -152,16 +152,17 @@
     <br>
     <br>
 
-    <div class="col s12 m12  animated fadeInUp" id ="juego2"> 
+    <div class="col s12 m12  animated zoomIn" id ="juego2" style="display: none;"> 
 
       <div class="card grey lighten-5">
         <div class="card-content ">
 
-          <p><b>Score:</b> <span id="juego2Score">0</span><span class="right"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i> <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-html="true" data-tooltip="De las opciones disponibles forma la respuesta <br>(el orden importa)">info</i></span></p>
+          <p><b>Score:</b> <span id="juego2Score">0</span><span class="right" id="juego2Vidas"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i> <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-html="true" data-tooltip="De las opciones disponibles forma la respuesta <br>(el orden importa)">info</i></span></p>
 
           <br>
           <br>
           <div class="center" id="preguntaJuego2">
+            <h5 id="respuestaJuego2" class="animated fadeIn"> </h5>
             <img class="responsive-img center" src="">
 
             <br>
@@ -240,6 +241,8 @@
   var numPregunta;
   var enEspera = false;
   var sonido = true;
+
+  var juegoActivo = 1;
   $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal({
@@ -256,25 +259,32 @@
     cargaPreguntaInicial(0);
     contadorPreguntas = 0;
     $("#juego1Continuar").hide();
-    $("#juego1").show();
-    $("#juego2").hide();
+    
 
   });
 
   $("#tab1").click(function(){
 
-    
-    $("#juego1").show();
-    $("#juego2").hide();
-
+   $("#juego2").addClass("zoomOut").delay(300).queue(function(next){
+        $("#juego2").hide();
+        $(this).removeClass("zoomOut");
+        $("#juego1").show();
+        next();
+    });
+    juegoActivo = 1;
 
   });
 
    $("#tab2").click(function(){
 
-    $("#juego1").hide();
-    $("#juego2").show();
+    $("#juego1").addClass("zoomOut").delay(300).queue(function(next){
+        $("#juego1").hide();
+        $(this).removeClass("zoomOut");
+        $("#juego2").show();
+        next();
+    });
     
+    juegoActivo = 2;
 
   });
 
@@ -311,9 +321,13 @@
   $("#juego1Continuar").click(function(){
 
     $(this).hide();
-
     enEspera = false;
-    reloadPregunta();
+    $("#juego1").addClass("zoomOut").delay(300).queue(function(next){
+        $(this).removeClass("zoomOut");
+        reloadPregunta();
+        next();
+    });
+    
   });
 
 
@@ -339,8 +353,6 @@
       
 
       //quita vidas
-      
-
       $("#juego1Vidas").children().eq(0).addClass("fadeOut").delay(1600).queue(function(next){
         //$(this).removeClass("bounceOut");
         $("#juego1Vidas").children()[0].remove();
@@ -374,10 +386,7 @@
 
   function reloadPregunta(){
 
-    $("#juego1").addClass("zoomOut").delay(300).queue(function(next){
-        $(this).removeClass("zoomOut");
-        next();
-    });
+    
     //
 
     $(".juego1Respuesta").each(function() {
@@ -435,6 +444,7 @@
           $("#juego1Vidas").prepend('<i class="material-icons icon-red">favorite</i>');
         }
 
+        $("#juego1").show();
 
       },
       error: function(errorMsg){
@@ -467,6 +477,9 @@
   //$('.chips').material_chip();
   var numPreguntaJuego2 = 0;
   var juego2Score = 0;
+  var enEsperaJuego2 = false;
+  var juego2Vidas = 5;
+
 
   var colores = ["pink", "green", "red", "blue", "indigo", "teal", "cyan",  "light-blue", "light-green", "orange", "amber", "deep-orange", "blue-grey"];
   
@@ -526,6 +539,8 @@
     });
 
     $("#juego2Score").html(juego2Score);
+
+
   }
 
   function evaluaJuego2(){
@@ -543,20 +558,72 @@
 
   }
 
+  $(document).keyup(function(e){
+      if(e.keyCode == 13 && juegoActivo == 2)
+      {
+          buttonJuego2();
+      }
+  });
+
   $("#evaluarJuego2").click(function(){
 
-    if (evaluaJuego2()){
+    buttonJuego2();
+
+  });
+
+  function buttonJuego2(){
+    if(enEsperaJuego2){
+      enEsperaJuego2 = false;
+
+      if(juego2Vidas == 0){
+        //modal ya perdio
+        resetJuego2();
+        alert("ya perdio");
+      }
+
+      $("#evaluarJuego2").html("Evaluar");
+      $("#respuestaJuego2").html("");
+      //recarga otra pregunta
+      cargaPreguntasJuego2();
+
+
+    }else if (evaluaJuego2()){
       juego2Score += 10;
       Materialize.toast('Respuesta Correcta', 4000);
       cargaPreguntasJuego2();
 
+
     }else{
       Materialize.toast('Respuesta Incorrecta', 4000);
 
+      var ans = ''
+
+      for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
+        ans += preguntasJuego2[numPreguntaJuego2].respuesta[i].tag;
+      }
+      $("#respuestaJuego2").html("Respuesta: " + ans);
+      enEsperaJuego2 = true;
+      $$("#evaluarJuego2").html("continuar");
+      // quitar vida
+      $("#juego2Vidas").children().eq(0).addClass("fadeOut").delay(600).queue(function(next){
+        //$(this).removeClass("bounceOut");
+        $("#juego2Vidas").children()[0].remove();
+        next();
+      });
+      juego2Vidas --;
     }
 
+  }
 
-  });
+  function resetJuego2(){
+
+    juego2Vidas = 5;
+    for (var i = 0; i < juego2Vidas; i++) {
+      $("#juego2Vidas").prepend('<i class="material-icons icon-red">favorite</i>');
+    }
+    juego2Score = 0;
+    $("#juego2Score").html(juego2Score);
+  }
 
   $("#saltarPreguntaJuego2").click(function(){
 
