@@ -404,8 +404,8 @@
  
   // Función Cuando se selecciona Juego 1
   $("#tab1").click(function(){
-    Animacion("#juego2", "zoomOut", 400); // Animación de salida Juego 2
-    Animacion("#juego3", "zoomOut", 400); // Animación de salida Juego 3
+    animacion("#juego2", "zoomOut", 400); // Animación de salida Juego 2
+    animacion("#juego3", "zoomOut", 400); // Animación de salida Juego 3
     $("#juego1").show(); // Muestra Juego 1
     juegoActivo = 1; // Cambia el juego activo a 1
 
@@ -413,8 +413,8 @@
 
    // Función Cuando se selecciona Juego 2
   $("#tab2").click(function(){
-    Animacion("#juego1", "zoomOut", 400); // Animación de salida Juego 1
-    Animacion("#juego3", "zoomOut", 400); // Animación de salida Juego 3
+    animacion("#juego1", "zoomOut", 400); // Animación de salida Juego 1
+    animacion("#juego3", "zoomOut", 400); // Animación de salida Juego 3
     $("#juego2").show(); // Muestra Juego 2
     juegoActivo = 2; // Cambia el juego activo a 2
 
@@ -422,8 +422,8 @@
 
   // Función Cuando se selecciona Juego 3
   $("#tab3").click(function(){
-    Animacion("#juego1", "zoomOut", 400); // Animación de salida Juego 1
-    Animacion("#juego2", "zoomOut", 400); // Animación de salida Juego 2
+    animacion("#juego1", "zoomOut", 400); // Animación de salida Juego 1
+    animacion("#juego2", "zoomOut", 400); // Animación de salida Juego 2
     $("#juego3").show(); // Muestra Juego 3
     juegoActivo = 3; // Cambia el juego activo a 3
 
