@@ -5,22 +5,18 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
+  <!--  Import my own style -->
   <link type="text/css" rel="stylesheet" href="css/style.css">
-
+  <!--  Import animations -->
   <link rel="stylesheet" href="css/animate.min.css">
-
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta charset="UTF-8">
-
-  <script src="js/jquery-3.1.0.js" type="text/javascript"></script>
-  <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
-  <script src="js/jquery-ui.min.js" type="text/javascript"></script>
 </head>
 
 <body class="grey lighten-4">
 
+  <!-- NavBar -->
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper blue">
@@ -32,8 +28,11 @@
       </div>
     </nav>
   </div>
+  <!--/End NavBar -->
   <div class=" container">
    <div class="row">
+
+    <!-- Tabs -->
     <div class="col s12">
       <ul class="tabs">
         <li class="tab col s3"><a target="_self" href="index.html">Información</a></li>
@@ -42,298 +41,323 @@
         <!-- <li class="tab col s3"><a target="_self"  href="about.html">Acerca de</a></li> -->
       </ul>
     </div>
+    <!--/End Tabs -->
 
-
+    <!-- Game Selector -->
     <div id="test2" class="col s12" >
-
-
-
-      <div class="col s12 m4 animated fadeIn" id="tab1"> 
-        
-          <div class="card grey lighten-5 waves-effect hoverable active " >
-            <div class="card-content ">
-              <span class="card-title">Adivina el nombre</span>
-            </div>
-
+      <!-- Seleccionar Game 1 -->
+      <div class="col s4 animated fadeIn" id="tab1"> 
+        <div class="card grey lighten-5 waves-effect hoverable active " >
+          <div class="card-content ">
+            <span class="card-title">Adivina el nombre</span>
           </div>
-        
+        </div>
       </div>
-
-      <div class="col s12 m4 animated fadeIn" id="tab2"> 
-        
-          <div class="card grey lighten-5 waves-effect hoverable ">
-            <div class="card-content ">
-              <span class="card-title">Adivina la estructura</span>
-
-            </div>
-
+      <!-- Seleccionar Game 2 -->
+      <div class="col s4 animated fadeIn" id="tab2"> 
+        <div class="card grey lighten-5 waves-effect hoverable ">
+          <div class="card-content ">
+            <span class="card-title">Adivina la estructura</span>
           </div>
-        
+        </div>
       </div>
-
-      <div class="col s12 m4 animated fadeIn"> 
-        
-          <div class="card grey lighten-5 waves-effect hoverable">
-            <div class="card-content ">
-              <span class="card-title">Clasifica la estructura</span>
-
-            </div>
-
+      
+      <!-- Seleccionar Game 3 -->
+      <div class="col s4 animated fadeIn" id="tab3"> 
+        <div class="card grey lighten-5 waves-effect hoverable">
+          <div class="card-content ">
+            <span class="card-title">Clasifica la estructura</span>
           </div>
-        
+        </div>
       </div>
-
-
-
-
 
     </div>
-
-    <!-- Juego 1 HTML -->
+    <!--/End Game Selector -->
     
-
+    <!-- ======================================================================================================== -->
+    <!-- ================================================= JUEGO 1 ============================================== -->
+    <!-- ======================================================================================================== -->
+    <!-- Juego 1 HTML -->
     <div class="col s12 m12  animated zoomIn" id ="juego1" style="display: none;"> 
       <div class="card grey lighten-5">
         <div class="card-content ">
+          <!-- Seccion de Sonido, Score, Vidas e Info  -->
+          <p> 
+            <!-- Sonido -->
+            <span class="hov">
+              <i class="material-icons" id = "juego1Sound" >volume_up</i>
+            </span>
 
-          <p> <span class="hov"><i class="material-icons" id = "juego1Sound" >volume_up</i></span>  <b>Score:</b> <span id="juego1Score"></span><span class="right" id="juego1Vidas"> <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Selecciona la respuesta correcta">info</i></span></p>
-
-          <br>
+            <!-- Score -->
+            <b>Score:</b> <span id="juego1Score"></span>
+            
+            <!-- Vidas e Info -->
+            <span class="right" id="juego1Vidas"> 
+              <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Selecciona la respuesta correcta">info</i>
+            </span>
+          </p>
+          <!--/End Seccion de Sonido, Score, Vidas e Info  -->
+          
+          <!-- Seccion principal del juego -->
           <div class="center">
 
-
-
+            <!-- Pregunta -->
             <h5 class="" id="juego1Pregunta"></h5>
             
-            
+            <!-- Respuestas -->
             <div class="row ">
+
+              <!-- Respuesta 1 -->
               <div class="col s12 m6">
                 <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="1">
                   <img class="responsive-img center" src="" >
                   <p></p>
                 </div>
               </div>
+
+              <!-- Respuesta 2 -->
               <div class="col s12 m6">
                 <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="2">
                   <img class="responsive-img center" src="" >
                 </div>
               </div>
+
+              <!-- Respuesta 3 -->
               <div class="col s12 m6">
                 <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="3">
                   <img class="responsive-img center" src="" >
                 </div>
               </div>
+
+              <!-- Respuesta 4 -->
               <div class="col s12 m6">
                 <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="4">
                   <img class="responsive-img center" src="" >
                 </div>
               </div>
             </div>
-
-            
+            <!--/End Respuestas -->
           </div>
-
-          <br>
+          <!--/End Seccion principal del juego -->
           
+          <!-- Boton de Continuar -->
           <button class="btn waves-effect waves-light right teal animated pulse" type="submit" name="action" id="juego1Continuar" style="display: none;">Continuar
-
           </button>
-          
 
           <br>
           <br>
 
         </div>
-
       </div>
     </div>
-
+    <!--/End Juego 1 -->
 
 
     <br>
     <br>
     <br>
 
+    <!-- ======================================================================================================== -->
+    <!-- ================================================= JUEGO 2 ============================================== -->
+    <!-- ======================================================================================================== -->
+    <!-- Juego 2 -->
     <div class="col s12 m12  animated zoomIn" id ="juego2" style="display: none;"> 
-
       <div class="card grey lighten-5">
         <div class="card-content ">
 
-          <p><b>Score:</b> <span id="juego2Score">0</span><span class="right" id="juego2Vidas"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i> <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-html="true" data-tooltip="De las opciones disponibles forma la respuesta <br>(el orden importa)">info</i></span></p>
+          <!--  Seccion de Sonido, Score, Vidas e Info -->
+          <p>
+            <!--  Sonido -->
 
-          <br>
-          <br>
-          <div class="center" id="preguntaJuego2">
-            <h5 id="respuestaJuego2" class="animated fadeIn"> </h5>
-            <img class="responsive-img center" src="">
+            <!--  Score -->
+            <b>Score:</b> <span id="juego2Score">0</span>
+            
+            <!--  Vidas -->
+            <span class="right" id="juego2Vidas"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i> 
 
-            <br>
-            <br>
-            <div id ="selectedChips">
-             
+              <!--  Info -->
+              <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-html="true" data-tooltip="De las opciones disponibles forma la respuesta <br>(el orden importa)">info</i></span>
+
+            </p>
+            <!--/End Seccion Sonido, Score, Vidas e Info -->
+
+            <!--  Seccion principal del juego -->
+            <div class="center" id="preguntaJuego2">
+
+              <!--  Respuesta Correcta-->
+              <h5 id="respuestaJuego2" class="animated fadeIn"><br></h5>
+
+              <!--  Pregunta -->
+              <img class="responsive-img center" src="">
+              <br>
+
+              <!--  Respuesta del Usuario -->
+              <div id ="selectedChips">
+
+              </div>
+
+              <!--  division -->
+              <hr>
+              <br>
+
+              <!--  Opciones de respuesta -->
+              <div id="unselectedChips">
+              </div>
 
             </div>
-            
-            <hr>
+            <!--/End Seccion principal del juego -->
             <br>
-           
-            <div id="unselectedChips">
-            </div>
 
-            
-            
+            <!--  Boton de Evaluar -->
+            <button class="btn waves-effect waves-light right green animated pulse" id="evaluarJuego2">Evaluar</button>
+
+            <br>
+            <br>
           </div>
-          <br>
-          <br>
-          <!--
-          <button class="btn waves-effect waves-light left teal" type="submit" name="action" id="saltarPreguntaJuego2">Saltar
-          </button>
-          -->
-
-          
-
-          <button class="btn waves-effect waves-light right green " id="evaluarJuego2" >Evaluar 
-
-          </button>
-
-          <br>
-          <br>
-
         </div>
+      </div>
+      <!--/End Juego 2  -->
+
+
+      <!-- ====================================================================================================== -->
+      <!-- ================================================= JUEGO 3 ============================================ -->
+      <!-- ====================================================================================================== -->
+      <!-- Juego 3 -->
+      <div class="col s12 m12  animated zoomIn" id ="juego3" style="display: none;" > 
+        <div class="card grey lighten-5">
+          <div class="card-content ">
+
+            <!--  Seccion de Sonido, Score, Vidas e Info -->
+            <p>
+              <!--  Sonido -->
+
+              <!--  Score -->
+              <b>Score:</b> <span id="juego3Score">0</span>
+
+              <!--  Vidas -->
+              <span class="right" id="juego3Vidas"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i> 
+
+                <!--  Info -->
+                <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-html="true" data-tooltip="Arrastra la respuesta al lugar que se indica">info</i></span>
+
+              </p>
+              <!--/End Seccion Sonido, Score, Vidas e Info -->
+
+              <!--  Seccion principal juego 3 -->
+              <div class="center" id="preguntaJuego3">
+
+                <!--  Pregunta -->
+                <div class="row center-align" >
+
+                  <!--  Reacción -->
+                  <img class="responsive-img center col s12 m7" src="img/juego3/pregunta1.png" style="max-height:140px;width: auto;" >
+                  <br>
+
+                  <!--  Contenedor para arrastrar la respuesta -->
+                  <div class="col s12 m5 droppable">
+                    <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="1" >
+                      <p>Arrastra aqui la respuesta</p>
+                    </div>
+                  </div>
+                </div>
+                <!--/End Pregunta -->
+
+                <!--  Respuesta 1 y 2 -->
+                <div class="row " style="margin-bottom: 0;">
+                  <!--  Respuesta 1 -->
+                  <div class="col s6 ">
+                    <div class="card-panel blue-grey lighten-4 juego3Respuesta " data-num="1"  style="padding: 5px;">
+                      <img class="responsive-img center draggable hoverable" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
+                    </div>
+                  </div>
+                  <!--  Respuesta 2 -->
+                  <div class="col s6 ">
+                    <div class="card-panel blue-grey lighten-4 juego3Respuesta " data-num="1"  style="padding: 5px;">
+                      <img class="responsive-img center draggable hoverable" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
+                    </div>
+                  </div>
+                </div>  
+
+                <!--  Respuesta 3 y 4 -->
+                <div class="row " style="margin-bottom: 0;">
+                  <!--  Respuesta 3 -->
+                  <div class="col s6 ">
+                    <div class="card-panel blue-grey lighten-4  juego3Respuesta " data-num="1"  style="padding: 5px;">
+                      <img class="responsive-img center draggable hoverable" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
+                    </div>
+                  </div>
+                  <!--  Respuesta 4 -->
+                  <div class="col s6 ">
+                    <div class="card-panel blue-grey lighten-4  juego3Respuesta " data-num="1"  style="padding: 5px;">
+                      <img class="responsive-img center draggable hoverable" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
+                    </div>
+                  </div>
+                </div>
+                <!-- /End Respuesta 1,2,3 y 4 -->
+              </div>
+              <!--/End Seccion principal juego 3 -->
+
+              <!--  Si existe un boton va aqui, Tambien dos <br> -->
+            </div>
+          </div>
+        </div>
+        <!--/End Juego 3-->
+
 
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <!--/End row-->
     </div>
+    <!--/End container-->
 
-    <div class="col s12 m12  animated zoomIn" id ="juego3" > 
 
-      <div class="card grey lighten-5">
-        <div class="card-content ">
-
-          <p><b>Score:</b> <span id="juego3Score">0</span><span class="right" id="juego3Vidas"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i> <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-html="true" data-tooltip="Arrastra la imagen a su categoria correspondiente">info</i></span></p>
-
-          <br>
-          <br>
-          <div class="center" id="preguntaJuego3">
-            <h5 id="respuestaJuego2" class="animated fadeIn draggable">algo </h5>
-            <img class="responsive-img center draggable" src="img/juego2/pregunta1.png">
-            
-            <div class="row ">
-              <div class="col s12 m6 droppable">
-                <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="1" >
-                  <img class="responsive-img center" src="" >
-                  <br>
-                  <br>
-                  <p>Tipo 1</p>
-                  <br>
-                  <br>
-                </div>
-              </div>
-              <div class="col s12 m6 droppable">
-                <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="2">
-                  <img class="responsive-img center" src="" >
-                  <br>
-                  <br>
-                  <p>Tipo 2</p>
-                  <br>
-                  <br>
-                </div>
-              </div>
-              <div class="col s12 m6 droppable">
-                <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="3">
-                  <img class="responsive-img center" src="" >
-                  <br>
-                  <br>
-                  <p>Tipo 3</p>
-                  <br>
-                  <br>
-                </div>
-              </div>
-              <div class="col s12 m6 droppable">
-                <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="4">
-                  <img class="responsive-img center" src="" >
-                  <br>
-                  <br>
-                  <p>Tipo 4</p>
-                  <br>
-                  <br>
-                </div>
-              </div>
-            </div>
-            
-
-            
-            
-          </div>
-          <br>
-          <br>
-          <!--
-          <button class="btn waves-effect waves-light left teal" type="submit" name="action" id="saltarPreguntaJuego2">Saltar
-          </button>
-          -->
-
-          
-
-          
-
-          </button>
-
-          <br>
-          <br>
-
-        </div>
-
+    <!-- Modal Puntuacion Maxima -->
+    <div id="juego1TopScore" class="modal">
+      <div class="modal-content center">
+        <h4>Puntuación Máxima: <br> <span id="juego1TopScore">100</span> </h4>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Continuar</a>
+      </div>
     </div>
-
-  </div>
-
-</div>
-
-<!-- Modal Structure -->
-<div id="juego1TopScore" class="modal">
-  <div class="modal-content center">
-    <h4>Puntuación Máxima: <br> <span id="juego1TopScore">100</span> </h4>
     
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Continuar</a>
-  </div>
-</div>
+  <!--  Import jquery  -->
+  <script src="js/jquery-3.1.0.js" type="text/javascript"></script>
+  <!--  Import function to play sound -->
+  <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
+  <!--  Import jquery-ui-->
+  <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
 
+  <script>
 
-
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="js/materialize.min.js"></script>
-
-
-
-
-<script>
-
-  var preguntas;
-  var preguntasJuego2;
-  var contadorPreguntas = 1 ;
+  // =============================================== VARIABLES GLOBALES ===========================================
+  // Variables globales Juego 1
+  var preguntasJuego1;
   var juego1Score = 0;
   var juego1Vidas = 5;
-  var numPregunta;
+  var numPreguntaJuego1;
+
+  // variables globales Juego 2
+  var preguntasJuego2;
+  var numPreguntaJuego2 = 0;
+  var juego2Score = 0;
+  var enEsperaJuego2 = false;
+  var juego2Vidas = 5;
+  var colores = ["pink", "green", "red", "blue", "indigo", "teal", "cyan",  "light-blue", "light-green", "orange", "amber", "deep-orange", "blue-grey"];
+
+
+    var contadorPreguntas = 1 ; // nose si se usa en algun lado
+
+  // Variables globales generales
   var enEspera = false;
   var sonido = true;
-
   var juegoActivo = 1;
+
+
   $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    
+    // Modal Nose si se utiliza
     $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: .5, // Opacity of modal background
@@ -345,186 +369,118 @@
       complete: function() {  } // Callback for Modal close
     });
 
-    cargaPreguntaInicial(0);
-    contadorPreguntas = 0;
-    $("#juego1Continuar").hide();
-    
-
-  });
-  $("juego3").show();
-
-  $("#tab1").click(function(){
-
-   $("#juego2").addClass("zoomOut").delay(300).queue(function(next){
-        $("#juego2").hide();
-        $(this).removeClass("zoomOut");
-        $("#juego1").show();
-        next();
-    });
-    juegoActivo = 1;
-
   });
 
-   $("#tab2").click(function(){
+  // ============================================ INICIALIZACIÓN  ==============================================
 
-    $("#juego1").addClass("zoomOut").delay(300).queue(function(next){
-        $("#juego1").hide();
-        $(this).removeClass("zoomOut");
-        $("#juego2").show();
-        next();
-    });
-    
-    juegoActivo = 2;
 
+  // Inicializacion para el juego 1
+  cargaPreguntaInicial(0);
+  contadorPreguntas = 0;
+  $("#juego1Continuar").hide();
+
+
+  // Inicialización para el juego 2
+  getDataJuego2();
+  $("#selectedChips").sortable();
+  $( "#selectedChips" ).disableSelection();
+
+
+
+  // cuando se presiona Enter
+  $(document).keyup(function(e){
+    if(e.keyCode == 13 && juegoActivo == 2)
+    {
+      buttonJuego2();
+
+    }else if (e.keyCode ==  13 && juegoActivo == 1){
+      clickJuego1Continuar();
+    }
   });
 
-   $("#juego1Sound").click(function(){
-
-      if(sonido){
-        $(this).html("volume_off");
-      }else{
-        $(this).html("volume_up");
-      }
-      sonido = !sonido;
-
-   });
-
-
-</script>
-
-<!-- Juego1 -->
-<script>
   
 
-
-  $(".juego1Respuesta").click(function (){
-
-    if(!enEspera){
-      evalua(numPregunta, $(this).data("num") );
-    }else{
-      console.log("falso, espera activa");
-    }
-    
+  // ============================================ SELECCIÓN  DE JUEGO ==============================================
+ 
+  // Función Cuando se selecciona Juego 1
+  $("#tab1").click(function(){
+    Animacion("#juego2", "zoomOut", 400); // Animación de salida Juego 2
+    Animacion("#juego3", "zoomOut", 400); // Animación de salida Juego 3
+    $("#juego1").show(); // Muestra Juego 1
+    juegoActivo = 1; // Cambia el juego activo a 1
 
   });
 
-  $("#juego1Continuar").click(function(){
-    clickJuego1Continuar();
-    
+   // Función Cuando se selecciona Juego 2
+  $("#tab2").click(function(){
+    Animacion("#juego1", "zoomOut", 400); // Animación de salida Juego 1
+    Animacion("#juego3", "zoomOut", 400); // Animación de salida Juego 3
+    $("#juego2").show(); // Muestra Juego 2
+    juegoActivo = 2; // Cambia el juego activo a 2
+
   });
 
-  function clickJuego1Continuar(){
+  // Función Cuando se selecciona Juego 3
+  $("#tab3").click(function(){
+    Animacion("#juego1", "zoomOut", 400); // Animación de salida Juego 1
+    Animacion("#juego2", "zoomOut", 400); // Animación de salida Juego 2
+    $("#juego3").show(); // Muestra Juego 3
+    juegoActivo = 3; // Cambia el juego activo a 3
 
-    $("#juego1Continuar").hide();
-    enEspera = false;
-    $("#juego1").addClass("zoomOut").delay(300).queue(function(next){
-        $(this).removeClass("zoomOut");
-        reloadPregunta();
-        next();
+  });
+
+  // =================================================== SONIDO ==============================================
+
+  // cuando se da click en el boton del sonido en el juego 1
+  $("#juego1Sound").click(function(){
+    sonido(this);
+  });
+
+  // cuando se da click en el boton del sonido en el juego 2
+  $("#juego2Sound").click(function(){
+    sonido(this);
+  });
+
+  // cuando se da click en el boton del sonido en el juego 3
+  $("#juego3Sound").click(function(){
+    sonido(this);
+  });
+
+
+  // ============================================ FUNCIONES AUXILIARES =============================================
+  
+  // Funcion que agrega animación de salida a un objeto con cierto delay
+  function animacion(objeto, anima, delay){
+    $(objeto).addClass(anima).delay(delay).queue(function(next){
+      $(objeto).hide();
+      $(this).removeClass(anima);
+      next();
     });
   }
 
-  function evalua(num,resp){
-
-
-    if (preguntas[num]['correcta'] == resp){
-      $(".juego1Respuesta").eq(preguntas[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
-      juego1Score += 10;
-      Materialize.toast('Respuesta Correcta', 4000);
-      if(sonido){
-        $.playSound("sounds/correct");
-      }
-      reloadPregunta();
-
+  // Funcion que activa o desactiva el sonido del juego
+  function sonido(objeto){
+    if(sonido){
+      $(objeto).html("volume_off");
     }else{
-
-      juego1Vidas --;
-      Materialize.toast('Sigue Intentando', 4000); 
-      if(sonido){
-        $.playSound("sounds/error");
-      }
-      
-
-      //quita vidas
-      $("#juego1Vidas").children().eq(0).addClass("fadeOut").delay(1600).queue(function(next){
-        //$(this).removeClass("bounceOut");
-        $("#juego1Vidas").children()[0].remove();
-        next();
-      });
-
-
-      
-
-
-      //cambia los colores a las respuestas
-      $(".juego1Respuesta").each(function() {
-        $( this ).removeClass( "blue-grey lighten-1" ).addClass("red incorrecta");
-      });
-
-      $(".juego1Respuesta").eq(preguntas[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
-
-      //muestra el boton de continuar
-      $("#juego1Continuar").show();
-
-      enEspera = true;
-
-
-
-      if (juego1Vidas == 0){
-        reset();
-        $('#juego1TopScore').openModal();
-        
-      }
-      
-
+      $(objeto).html("volume_up");
     }
-    contadorPreguntas ++;
-
+    sonido = !sonido;
   }
+  // =================================================== GET DATA ==============================================
 
-  function reloadPregunta(){
 
-    if(juego1Vidas == 1){
-          $("#juego1Vidas").children().eq(0).addClass("flash animated infinite");
-      }
-    //
-
-    $(".juego1Respuesta").each(function() {
-        $( this ).removeClass( "red incorrecta green" ).addClass( "blue-grey lighten-1");
-    });
-
-    numPregunta = Math.floor((Math.random() * preguntas.length) + 0);
-
-    p = preguntas[numPregunta];
-    $("#juego1Pregunta").html(p['pregunta']);
-
-    $(".juego1Respuesta").eq(0).html(p['respuesta1']);
-    $(".juego1Respuesta").eq(1).html(p['respuesta2']);
-    $(".juego1Respuesta").eq(2).html(p['respuesta3']);
-    $(".juego1Respuesta").eq(3).html(p['respuesta4']);
-    /*
-    $(".juego1Respuesta > img").eq(0).attr('src', 'img/juego1/' + p['respuesta1']);
-    $(".juego1Respuesta > img").eq(1).attr('src', 'img/juego1/' + p['respuesta2']);
-    $(".juego1Respuesta > img").eq(2).attr('src', 'img/juego1/' + p['respuesta3']);
-    $(".juego1Respuesta > img").eq(3).attr('src', 'img/juego1/' + p['respuesta4']);
-    */
-
-    $("#juego1Score").html(juego1Score);
-    
-  }
-
+  // Funcion que carga las preguntas del .json para el Juego 1
   function cargaPreguntaInicial(){
-
     $.ajax({
       url: 'data/juego1.json',
       type: 'GET',
       datatype: 'json',
       success: function(data){
+        preguntasJuego1 = data['preguntas'];
 
-        preguntas = data['preguntas'];
-
-        numPregunta = Math.floor((Math.random() * preguntas.length) + 0);
-        p = preguntas[numPregunta];
+        numPreguntaJuego1 = Math.floor((Math.random() * preguntasJuego1.length) + 0);
+        p = preguntasJuego1[numPreguntaJuego1];
         $("#juego1Pregunta").html(p['pregunta']);
 
         $(".juego1Respuesta").eq(0).html(p['respuesta1']);
@@ -548,233 +504,308 @@
 
       },
       error: function(errorMsg){
-
-        console.log("nojala");
+        console.log("Error en juego1.json");
       }
 
     });
-
   };
 
-  function reset(){
-    
-    juego1Score = 0;
-    juego1Vidas = 5;
-
-    cargaPreguntaInicial(0);
-    reloadPregunta();
-    contadorPreguntas = 0;
-    $("#juego1Continuar").hide();
-
-    enEspera = false;
-
-  };
-
-
-</script>
-<!-- Juego 2 -->
-<script>
-  //$('.chips').material_chip();
-  var numPreguntaJuego2 = 0;
-  var juego2Score = 0;
-  var enEsperaJuego2 = false;
-  var juego2Vidas = 5;
-
-
-  var colores = ["pink", "green", "red", "blue", "indigo", "teal", "cyan",  "light-blue", "light-green", "orange", "amber", "deep-orange", "blue-grey"];
-  
-  $(document).on('click',".chip-unselected",function(){
-    console.log("unselect");
-    //console.log($(this).text());
-    var indexColor =  Math.floor((Math.random() * colores.length) + 0);
-    $("#selectedChips").append('<div class="chip hoverable ' + colores[indexColor] +' white-text chip-selected animated fadeIn"><span class="dataChip">' + $(this).text()  + '</span><i class="close1 material-icons">close</i></div>');
-    $(this).remove();
-  });
-
-  $(document).on('click',".chip-selected",function(){
-
-    console.log("selected");
-    //$("#unselectedChips").append('<div class="chip hoverable chip-unselected">' + propil + '</div>');
-    var data_text = $(this).children("span").text();
-    $("#unselectedChips").append('<div class="chip hoverable chip-unselected animated fadeIn">' + data_text + '</div>');
-
-    $(this).remove();
-  });
-
+  // Función que carga las preguntas del .json para el Juego 2
   function getDataJuego2(){
     $.ajax({
-          url: 'data/juego2.json',
-          type: 'GET',
-          datatype: 'json',
-          success: function(data){
-            preguntasJuego2 = data['preguntas'];
-            cargaPreguntasJuego2();
-          },
-          error: function(errorMsg){
-            console.log("Error in juego2.json");
-          }
-        });
+      url: 'data/juego2.json',
+      type: 'GET',
+      datatype: 'json',
+      success: function(data){
+        preguntasJuego2 = data['preguntas']; // guarda todas las preguntas en la variable preguntasJuego2
+        cargaPreguntasJuego2(); // carga una pregunta en el juego2
+      },
+      error: function(errorMsg){
+        console.log("Error en juego2.json"); // muestra error en la consola si no se pudo obtener juego2.json
+      }
+    });
+  }
 
+// ================================================== CARGA PREGUNTAS ==============================================
+
+// Función que carga una pregunta en juego 1
+function reloadPregunta(){
+
+  // cuando queda 1 vida agrega animación de flash
+  if(juego1Vidas == 1){
+    $("#juego1Vidas").children().eq(0).addClass("flash animated infinite");
   }
   
+  $(".juego1Respuesta").each(function() {
+    $( this ).removeClass( "red incorrecta green" ).addClass( "blue-grey lighten-1");
+  });
+
+  numPreguntaJuego1 = Math.floor((Math.random() * preguntasJuego1.length) + 0);
+
+  p = preguntasJuego1[numPreguntaJuego1];
+  $("#juego1Pregunta").html(p['pregunta']);
+
+  $(".juego1Respuesta").eq(0).html(p['respuesta1']);
+  $(".juego1Respuesta").eq(1).html(p['respuesta2']);
+  $(".juego1Respuesta").eq(2).html(p['respuesta3']);
+  $(".juego1Respuesta").eq(3).html(p['respuesta4']);
   
-  function cargaPreguntasJuego2(){
-
-    $("#juego2").addClass("fadeOutDown").delay(300).queue(function(next){
-        $(this).removeClass("fadeOutDown");
-        next();
-    });
-   
-    $("#selectedChips").html("");
-    $("#unselectedChips").html("");
-
-    numPreguntaJuego2 = Math.floor((Math.random() * preguntasJuego2.length) + 0);
-    var tags = preguntasJuego2[numPreguntaJuego2].tags;
-
-    $("#preguntaJuego2 >img").attr('src', 'img/juego2/' + preguntasJuego2[numPreguntaJuego2].pregunta);
-
-    $.each(tags, function(i, val){
-       //console.log(val.tag);
-       $("#unselectedChips").append('<div class="chip hoverable chip-unselected animated fadeIn">' + val.tag + '</div>');
-    });
-
-    $("#juego2Score").html(juego2Score);
+  $("#juego1Score").html(juego1Score); // actualiza score
+  
+}
 
 
+
+
+// Función que carga una pregunta en juego 2
+function cargaPreguntasJuego2(){
+
+  animacion("#juego2", "fadeOutDown", 300); // agrega animación a juego2 para el cambio de pregunta
+
+  // elimina los tags de la pregunta anterior
+  $("#selectedChips").html("");
+  $("#unselectedChips").html("");
+
+  // obtiene un numero random para la siguiente pregunta
+  numPreguntaJuego2 = Math.floor((Math.random() * preguntasJuego2.length) + 0);
+  var tags = preguntasJuego2[numPreguntaJuego2].tags;
+
+  $("#preguntaJuego2 >img").attr('src', 'img/juego2/' + preguntasJuego2[numPreguntaJuego2].pregunta);
+
+  // agrega cada uno de los tags a las opciones de respuestas
+  $.each(tags, function(i, val){
+     $("#unselectedChips").append('<div class="chip hoverable chip-unselected animated fadeIn">' + val.tag + '</div>');
+   });
+
+  $("#juego2Score").html(juego2Score); // Actualiza el score
+
+}
+// =================================================== RESET ==============================================
+
+// resetea variables para el juego 1
+function reset(){
+
+  juego1Score = 0;
+  juego1Vidas = 5;
+  cargaPreguntaInicial(0);
+  reloadPregunta();
+  contadorPreguntas = 0;
+  $("#juego1Continuar").hide();
+  enEspera = false;
+
+};
+
+// resetea variables para el juego 2
+function resetJuego2(){
+
+  juego2Vidas = 5;
+  for (var i = 0; i < juego2Vidas; i++) {
+    $("#juego2Vidas").prepend('<i class="material-icons icon-red">favorite</i>');
   }
+  juego2Score = 0;
+  $("#juego2Score").html(juego2Score);
+}
 
-  function evaluaJuego2(){
 
-    if (preguntasJuego2[numPreguntaJuego2].respuesta.length != $("#selectedChips").children().length){
-      return false;
-    }
-    for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
+// =================================================== EVALUA ==============================================
 
-        if (preguntasJuego2[numPreguntaJuego2].respuesta[i].tag != $("#selectedChips").children().eq(i).children('span').text())
-          return false;  
-    }
 
-    return true;
 
-  }
+$(".juego1Respuesta").click(function (){
 
-  $(document).keyup(function(e){
-      if(e.keyCode == 13 && juegoActivo == 2)
-      {
-          buttonJuego2();
-      }else if (e.keyCode ==  13 && juegoActivo == 1){
-        clickJuego1Continuar();
+      if(!enEspera){
+        evalua(numPreguntaJuego1, $(this).data("num") );
+      }else{
+        console.log("falso, espera activa");
       }
-  });
+    });
 
-  $("#evaluarJuego2").click(function(){
+    $("#juego1Continuar").click(function(){
+      clickJuego1Continuar();
 
-    buttonJuego2();
+    });
 
-  });
+    function clickJuego1Continuar(){
 
-  function buttonJuego2(){
-    if(enEsperaJuego2){
-      enEsperaJuego2 = false;
-
-      if(juego2Vidas == 0){
-        //modal ya perdio
-        resetJuego2();
-        alert("ya perdio");
-      }
-
-      $("#evaluarJuego2").html("Evaluar");
-      $("#respuestaJuego2").html("");
-      //recarga otra pregunta
-      cargaPreguntasJuego2();
-
-
-    }else if (evaluaJuego2()){
-      juego2Score += 10;
-      Materialize.toast('Respuesta Correcta', 4000);
-      cargaPreguntasJuego2();
-
-
-    }else{
-      Materialize.toast('Respuesta Incorrecta', 4000);
-
-      var ans = ''
-
-      for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
-        ans += preguntasJuego2[numPreguntaJuego2].respuesta[i].tag;
-      }
-      $("#respuestaJuego2").html("Respuesta: " + ans);
-      enEsperaJuego2 = true;
-      $$("#evaluarJuego2").html("continuar");
-      // quitar vida
-      $("#juego2Vidas").children().eq(0).addClass("fadeOut").delay(600).queue(function(next){
-        //$(this).removeClass("bounceOut");
-        $("#juego2Vidas").children()[0].remove();
+      $("#juego1Continuar").hide();
+      enEspera = false;
+      $("#juego1").addClass("zoomOut").delay(300).queue(function(next){
+        $(this).removeClass("zoomOut");
+        reloadPregunta();
         next();
       });
-      juego2Vidas --;
     }
 
-  }
+    function evalua(num,resp){
 
-  function resetJuego2(){
 
-    juego2Vidas = 5;
-    for (var i = 0; i < juego2Vidas; i++) {
-      $("#juego2Vidas").prepend('<i class="material-icons icon-red">favorite</i>');
+      if (preguntasJuego1[num]['correcta'] == resp){
+        $(".juego1Respuesta").eq(preguntasJuego1[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
+        juego1Score += 10;
+        Materialize.toast('Respuesta Correcta', 4000);
+        if(sonido){
+          $.playSound("sounds/correct");
+        }
+        reloadPregunta();
+
+      }else{
+
+        juego1Vidas --;
+        Materialize.toast('Sigue Intentando', 4000); 
+        if(sonido){
+          $.playSound("sounds/error");
+        }
+
+
+    //quita vidas
+    $("#juego1Vidas").children().eq(0).addClass("fadeOut").delay(1600).queue(function(next){
+      //$(this).removeClass("bounceOut");
+      $("#juego1Vidas").children()[0].remove();
+      next();
+    });
+
+
+    
+
+
+    //cambia los colores a las respuestas
+    $(".juego1Respuesta").each(function() {
+      $( this ).removeClass( "blue-grey lighten-1" ).addClass("red incorrecta");
+    });
+
+    $(".juego1Respuesta").eq(preguntasJuego1[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
+
+    //muestra el boton de continuar
+    $("#juego1Continuar").show();
+    enEspera = true;
+    if (juego1Vidas == 0){
+      reset();
+      $('#juego1TopScore').openModal();
+      
     }
-    juego2Score = 0;
-    $("#juego2Score").html(juego2Score);
   }
+  contadorPreguntas ++;
 
-  $("#saltarPreguntaJuego2").click(function(){
+}
 
+
+
+$("#evaluarJuego2").click(function(){
+  buttonJuego2();
+});
+
+function buttonJuego2(){
+
+  if(enEsperaJuego2){
+    enEsperaJuego2 = false;
+
+    if(juego2Vidas == 0){
+      //modal ya perdio
+      resetJuego2();
+      alert("ya perdio");
+    }
+
+    $("#evaluarJuego2").html("Evaluar");
+    $("#respuestaJuego2").html("<br>");
+    //recarga otra pregunta
     cargaPreguntasJuego2();
 
-  });
 
-  getDataJuego2();
-  
-  $("#selectedChips").sortable();
-  $( "#selectedChips" ).disableSelection();
-  
+  }else if (evaluaJuego2()){
+    juego2Score += 10;
+    Materialize.toast('Respuesta Correcta', 4000);
+    cargaPreguntasJuego2();
 
+  }else{
+    Materialize.toast('Respuesta Incorrecta', 4000);
+
+    var ans = ''
+
+    for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
+      ans += preguntasJuego2[numPreguntaJuego2].respuesta[i].tag;
+    }
+    $("#respuestaJuego2").html("Respuesta: " + ans);
+    enEsperaJuego2 = true;
+    $$("#evaluarJuego2").html("continuar");
+    // quitar vida
+    $("#juego2Vidas").children().eq(0).addClass("fadeOut").delay(600).queue(function(next){
+      //$(this).removeClass("bounceOut");
+      $("#juego2Vidas").children()[0].remove();
+      next();
+    });
+    juego2Vidas --;
+  }
+
+}
+
+function evaluaJuego2(){
+  if (preguntasJuego2[numPreguntaJuego2].respuesta.length != $("#selectedChips").children().length){
+    return false;
+  }
+
+  for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
+    if (preguntasJuego2[numPreguntaJuego2].respuesta[i].tag != $("#selectedChips").children().eq(i).children('span').text())
+      return false;  
+  }
+  return true;
+}
+
+$(document).on('click',".chip-unselected",function(){
+  
+  var indexColor =  Math.floor((Math.random() * colores.length) + 0);
+  $("#selectedChips").append('<div class="chip hoverable ' + colores[indexColor] +' white-text chip-selected animated fadeIn"><span class="dataChip">' + $(this).text()  + '</span><i class="close1 material-icons">close</i></div>');
+  $(this).remove();
+});
+
+$(document).on('click',".chip-selected",function(){
+
+  //$("#unselectedChips").append('<div class="chip hoverable chip-unselected">' + propil + '</div>');
+  var data_text = $(this).children("span").text();
+  $("#unselectedChips").append('<div class="chip hoverable chip-unselected animated fadeIn">' + data_text + '</div>');
+
+  $(this).remove();
+});
+
+// =================================================== FIN ===================================================
 </script>
 
 <script type="text/javascript">
+
+
+
 $(".draggable").draggable
-    ({  
-        revert: 'invalid',
-        
-    });
+({  
+  revert: 'invalid',
 
-  $( function() {
-    $( ".draggable" ).draggable();
+});
 
-    $( ".droppable" ).droppable({
-      over: function(event, ui) {
-        
-        $(this).eq(0).children().removeClass("grey")
-                   .addClass("light-blue");
-        
-        ui.draggable.data("current-droppable", $(this));  // Associate.
+$( function() {
+  $( ".draggable" ).draggable();
+
+  $( ".droppable" ).droppable({
+    over: function(event, ui) {
+
+      $(this).eq(0).children().removeClass("grey")
+      .addClass("light-blue");
+      
+      ui.draggable.data("current-droppable", $(this));  // Associate.
     },
 
     out: function(event, ui) {
-        ui.draggable.removeData("current-droppable");     // Break association.
-        $(this).eq(0).children().removeClass("light-blue")
-                   .addClass("grey");
+      ui.draggable.removeData("current-droppable");     // Break association.
+      $(this).eq(0).children().removeClass("light-blue")
+      .addClass("grey");
     },
-      drop: function( event, ui ) {
-        
-        alert($(this).find('p').html());
-      }
-    });
+    drop: function( event, ui ) {
 
-    
-
-
+      alert($(this).find('p').html());
+    }
   });
+
+  
+
+
+});
 
 </script>
 </body>
