@@ -475,7 +475,7 @@
     $.ajax({
       url: 'data/juego1.json',
       type: 'GET',
-      datatype: 'json',
+      dataType: 'json',
       success: function(data){
         preguntasJuego1 = data['preguntas'];
 
@@ -515,7 +515,7 @@
     $.ajax({
       url: 'data/juego2.json',
       type: 'GET',
-      datatype: 'json',
+      dataType: 'json',
       success: function(data){
         preguntasJuego2 = data['preguntas']; // guarda todas las preguntas en la variable preguntasJuego2
         cargaPreguntasJuego2(); // carga una pregunta en el juego2
