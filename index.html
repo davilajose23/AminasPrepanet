@@ -5,12 +5,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
+  <!--  Import my own style -->
   <link type="text/css" rel="stylesheet" href="css/style.css">
+  <!--  Import animations -->
   <link rel="stylesheet" href="css/animate.min.css">
   <!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="css/zmd.hierarchical-display.min.css">
-
+  <link rel="stylesheet" href="css/zmd.hierarchical-display.min.css">
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,7 +18,7 @@
 </head>
 
 <body class="grey lighten-4">
-  
+  <!-- NavBar -->
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper blue">
@@ -30,8 +30,10 @@
       </div>
     </nav>
   </div>
+  <!--/End NavBar -->
   <div class="container ">
-   <div class="row">
+  <div class="row">
+    <!-- Tabs -->
     <div class="col s12">
       <ul class="tabs">
         <li class="tab col s3"><a target="_self" class="active"  href="index.html" onclick="$("#contenedor").hierarchicalDisplay('hide');" >Información</a></li>
@@ -40,122 +42,140 @@
         <!-- <li class="tab col s3"><a target="_self"  href="about.html">Acerca de</a></li> -->
       </ul>
     </div>
-
+    <!--/End Tabs -->
+    
+    <!-- Información -->
     <div id="info" class="col s12" >
 
+      <!-- Cards Contenedor -->
       <div class="row" data-animation="hierarchical-display" data-animationIn="bounceIn" id="contenedor">
+
+        <!-- Card -->
         <div class="col s12 m4 ">
           <div class="card green">
             <div class="card-content white-text">
+
               <span class="card-title">¿Qué es una amina?</span>
               <p>Una amina es un compuesto en el que se han sustituido uno o más hidrógenos del amoniaco por un grupo alquilo. Existen aminas primarias, aminas secundarias y aminas terciarias.</p>
               <br>
               <br>
               <br>
               <br>
+
             </div>
-            
           </div>
         </div>
+        <!--/End Card -->
 
+        <!-- Card -->
         <div class="col s12 m8 ">
           <div class="card teal darken-5">
             <div class="card-content white-text ">
+
               <span class="card-title">Aminas en el ámbito de la salud</span>
               <p>Las aminas tienen diferentes aplicaciones en la vida, se encuentran en la comida, fertilizantes, ropa y muchas más en este proyecto hablaremos sobre su aplicación en la salud.
-              Las aminas se encuentran en nuestro cuerpo principalmente en los aminoácidos. 
-              Un aminoácido es una molécula orgánica con un grupo amino (-NH2) y un grupo carboxilo (-COOH).1 Los aminoácidos más frecuentes y de mayor interés son aquellos que forman parte de las proteínas. Dos aminoácidos se combinan en una reacción de condensación entre el grupo amino de uno y el carboxilo del otro, liberándose una molécula de agua y formando un enlace amida que se denomina enlace peptídico; estos dos "residuos" de aminoácido forman un dipéptido. 
+                Las aminas se encuentran en nuestro cuerpo principalmente en los aminoácidos. 
+                Un aminoácido es una molécula orgánica con un grupo amino (-NH2) y un grupo carboxilo (-COOH).1 Los aminoácidos más frecuentes y de mayor interés son aquellos que forman parte de las proteínas. Dos aminoácidos se combinan en una reacción de condensación entre el grupo amino de uno y el carboxilo del otro, liberándose una molécula de agua y formando un enlace amida que se denomina enlace peptídico; estos dos "residuos" de aminoácido forman un dipéptido. 
               </p>
               
             </div>
-            
           </div>
         </div>
+        <!--/End Card -->
+
+        <!-- Card -->
         <div class="col s12 m6 ">
           <div class="card  yellow darken-4">
             <div class="card-content white-text ">
+
               <span class="card-title">Tipos de aminoácidos</span>
               <p>  Existen dos tipos principales de aminoácidos que están agrupados según su procedencia y características. Estos grupos son aminoácidos esenciales y aminoácidos no esenciales.</p>
               <br>
               <br>
               <br>
+
             </div>
-            
           </div>
         </div>
+        <!--/End Card -->
 
+        <!-- Card -->
         <div class="col s12 m6 ">
           <div class="card cyan darken-5">
             <div class="card-content white-text ">
+
               <span class="card-title">Tipos de aminoácidos</span>
               <p>  Aminoácidos esenciales aquellos que no pueden ser sintetizados en el organismo y para obtenerlos es necesario tomar alimentos ricos en proteínas que los contengan. Nuestro organismo, descompone las proteínas para obtener los aminoácidos esenciales y formar así nuevas proteínas</p>
               <br>
               
-              
             </div>
-            
           </div>
         </div>
-         <div class="col s12  ">
+        <!--/End Card -->
+        <!-- Card -->
+        <div class="col s12  ">
           <div class="card indigo ">
             <div class="card-content white-text ">
+
               <span class="card-title "><h5 class="center-align">Valores de pKa para los distintos grupos ionizables de los 20 alfa-aminoácidos que forman las proteínas y punto isoeléctrico</h5></span>
+
+              <!-- Tabla -->
               <table class="centered ">
                 <thead>
-                <tr>
-                  <th >Aminoacido</th>
-                  <th>pKa <br> a-COOH</th>
-                  <th>pKa <br> a-NH3+</th>
-                  <th>pKa <br> cadena lateral</th>
+                  <tr>
+                    <th >Aminoacido</th>
+                    <th>pKa <br> a-COOH</th>
+                    <th>pKa <br> a-NH3+</th>
+                    <th>pKa <br> cadena lateral</th>
 
-                </tr>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr> 
-                <td>Ácido aspártico</td>
-                  <td>2.09</td>
-                  <td>9.82</td>
-                  <td>3.86</td>         
-                </tr>
-                <tr>
-                  <td>Ácido glutámico</td>
-                  <td>2.19</td>
-                  <td>9.67</td>
-                  <td>4.25</td>
-                </tr>
-                <tr>
-                  <td>Alanina</td>
-                  <td>2.34</td>
-                  <td>9.69</td>
-                  <td>----</td>
+                  <tr> 
+                    <td>Ácido aspártico</td>
+                    <td>2.09</td>
+                    <td>9.82</td>
+                    <td>3.86</td>         
                   </tr>
-                <tr>
-                  <td>Arginina</td>
-                  <td>2.17</td>
-                  <td>9.04</td>
-                  <td>12.48</td>
+                  <tr>
+                    <td>Ácido glutámico</td>
+                    <td>2.19</td>
+                    <td>9.67</td>
+                    <td>4.25</td>
+                  </tr>
+                  <tr>
+                    <td>Alanina</td>
+                    <td>2.34</td>
+                    <td>9.69</td>
+                    <td>----</td>
+                  </tr>
+                  <tr>
+                    <td>Arginina</td>
+                    <td>2.17</td>
+                    <td>9.04</td>
+                    <td>12.48</td>
 
-                </tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
+                  </tr>
+                  <tr></tr>
+                  <tr></tr>
+                  <tr></tr>
+                  <tr></tr>
                 </tbody>
               </table>
-              
+              <!--/End Tabla -->
               
             </div>
-            
           </div>
         </div>
+        <!--/End Card -->
         
-<!--
+
         <div class="col s12 m6">
           <div class="card grey lighten-5">
             <div class="card-content ">
-            <span class="card-title center-align"> <h5><strong>1,3-propanodiamina</strong><br>NH2CH2CH2CH2NH2</h5></span>
+              <span class="card-title center-align"> <h5><strong>1,3-propanodiamina</strong><br>NH2CH2CH2CH2NH2</h5></span>
               <div class="video-container">
-                
+
                 <iframe style="width: 100%; height: 100%;" frameborder="0" src="http://embed.molview.org/v1/?mode=balls&cid=428"></iframe>
                 algo asqui
               </div>
@@ -168,9 +188,9 @@
         <div class="col s12 m6">
           <div class="card grey lighten-5">
             <div class="card-content ">
-            <span class="card-title center-align"> <h5><strong>Ciclohexamina</strong><br>NH2CH2CH2CH2CH2CH2CH3</h5></span>
+              <span class="card-title center-align"> <h5><strong>Ciclohexamina</strong><br>NH2CH2CH2CH2CH2CH2CH3</h5></span>
               <div class="video-container">
-                
+
                 <iframe style="width: 100%; height: 100%;" frameborder="0" src="http://embed.molview.org/v1/?mode=balls&cid=8102"></iframe>
               </div>
               <br>
@@ -178,46 +198,49 @@
             
           </div>
         </div>
--->
 
+
+        <!-- Video Card -->
         <div class="col s12 m12">
           <div class="card grey lighten-5">
             <div class="card-content ">
+
               <div class="video-container">
-                
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Fk0UYZTX8cc" frameborder="0" allowfullscreen></iframe>
               </div>
+
               <br>
+
             </div>
-            
           </div>
         </div>
-
-        
+        <!--/End Video Card -->
 
       </div>
-
+      <!--/End Cards Contenedor-->
 
     </div>
+    <!--/End Información -->
     
   </div>
-  
-</div>
+    <!--/End Row -->
+  </div>
+  <!--/End Container -->
 
-
-
-<!--Import jQuery before materialize.js-->
+<!--  Import jquery  -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
-<!-- Compiled and minified JavaScript -->
+<!-- Import hierarchical animation -->
 <script src="js/jquery.zmd.hierarchical-display.min.js"></script>
+
 <script>
+  // inicializa la clase para hacer hierarchical animation
   $('.zmd-hierarchical-display').hierarchicalDisplay({
-  speed: 10,
-  animationIn: "bounceIn"
+    speed: 10,
+    animationIn: "bounceIn"
 
-
-});
+  });
 
 
 </script>
