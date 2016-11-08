@@ -850,6 +850,7 @@ $("#juego3Continuar").click(function() {
   //cambia los colores a las respuestas
     $(".juego3Respuesta").each(function() {
       $( this ).removeClass( "red incorrecta" ).addClass("blue-grey lighten-4");
+      $( this ).removeClass( "green" ).addClass("blue-grey lighten-4");
     });
   cargaPreguntasJuego3();
 
@@ -877,7 +878,7 @@ function evaluaJuego3(respuestaJ3){
  
   } else {
 
-    $(".juego3Respuesta").eq(preguntasJuego1[numPreguntaJuego3]['correcta'] - 1).removeClass( "red" ).addClass("green");
+    $(".juego3Respuesta").eq(preguntasJuego3[numPreguntaJuego3]['correcta'] - 1).removeClass( "red" ).addClass("green");
     juego3Vidas --;
     Materialize.toast('Sigue Intentando', 4000); 
     if(sonido){
