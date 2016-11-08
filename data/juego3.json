@@ -1,0 +1,37 @@
+
+{"preguntas":[
+    {
+    	"pregunta":  "pregunta1.png", 
+    	"respuesta1":"respuesta1.png",
+    	"respuesta2":"respuesta2.png",
+    	"respuesta3":"respuesta3.png",
+    	"respuesta4":"respuesta4.png",
+    	"correcta":1
+    },
+    
+    {   
+        "pregunta":  "pregunta1.png", 
+        "respuesta1":"respuesta3.png",
+        "respuesta2":"respuesta3.png",
+        "respuesta3":"respuesta3.png",
+        "respuesta4":"respuesta3.png",
+        "correcta":2
+    },
+    {
+        "pregunta":  "pregunta1.png", 
+        "respuesta1":"respuesta1.png",
+        "respuesta2":"respuesta1.png",
+        "respuesta3":"respuesta1.png",
+        "respuesta4":"respuesta1.png",
+        "correcta":3
+    },
+    {
+        "pregunta":  "pregunta1.png", 
+        "respuesta1":"respuesta2.png",
+        "respuesta2":"respuesta2.png",
+        "respuesta3":"respuesta2.png",
+        "respuesta4":"respuesta2.png",
+        "correcta":4
+    }
+    
+]}

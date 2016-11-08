@@ -249,13 +249,13 @@
                 <!--  Pregunta -->
                 <div class="row center-align" >
 
-                  <!--  Reacción -->
-                  <img class="responsive-img center col s12 m7" src="img/juego3/pregunta1.png" style="max-height:140px;width: auto;" >
+                  <!--  Reacción src="img/juego3/pregunta1.png" -->
+                  <img class="responsive-img center col s12 m7" src="" style="max-height:140px;width: auto;" >
                   <br>
 
                   <!--  Contenedor para arrastrar la respuesta -->
                   <div class="col s12 m5 droppable">
-                    <div class="card-panel grey lighten-4 dashed juego3Respuesta " data-num="1" >
+                    <div class="card-panel grey lighten-4 dashed " data-num="0" >
                       <p>Arrastra aqui la respuesta</p>
                     </div>
                   </div>
@@ -266,14 +266,14 @@
                 <div class="row " style="margin-bottom: 0;">
                   <!--  Respuesta 1 -->
                   <div class="col s6 ">
-                    <div class="card-panel blue-grey lighten-4 juego3Respuesta " data-num="1"  style="padding: 5px;">
-                      <img class="responsive-img center draggable hoverable" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
+                    <div class="card-panel blue-grey lighten-4 juego3Respuesta "  style="padding: 5px;">
+                      <img class="responsive-img center draggable hoverable" data-num="1" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
                     </div>
                   </div>
                   <!--  Respuesta 2 -->
                   <div class="col s6 ">
-                    <div class="card-panel blue-grey lighten-4 juego3Respuesta " data-num="1"  style="padding: 5px;">
-                      <img class="responsive-img center draggable hoverable" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
+                    <div class="card-panel blue-grey lighten-4 juego3Respuesta "  style="padding: 5px;">
+                      <img class="responsive-img center draggable hoverable" data-num="2" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
                     </div>
                   </div>
                 </div>  
@@ -282,14 +282,14 @@
                 <div class="row " style="margin-bottom: 0;">
                   <!--  Respuesta 3 -->
                   <div class="col s6 ">
-                    <div class="card-panel blue-grey lighten-4  juego3Respuesta " data-num="1"  style="padding: 5px;">
-                      <img class="responsive-img center draggable hoverable" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
+                    <div class="card-panel blue-grey lighten-4  juego3Respuesta "   style="padding: 5px;">
+                      <img class="responsive-img center draggable hoverable" data-num="3" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
                     </div>
                   </div>
                   <!--  Respuesta 4 -->
                   <div class="col s6 ">
-                    <div class="card-panel blue-grey lighten-4  juego3Respuesta " data-num="1"  style="padding: 5px;">
-                      <img class="responsive-img center draggable hoverable" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
+                    <div class="card-panel blue-grey lighten-4  juego3Respuesta " style="padding: 5px;">
+                      <img class="responsive-img center draggable hoverable" data-num="4" src="img/juego3/respuesta1.png" style= "max-height: 100px;">
                     </div>
                   </div>
                 </div>
@@ -298,6 +298,20 @@
               <!--/End Seccion principal juego 3 -->
 
               <!--  Si existe un boton va aqui, Tambien dos <br> -->
+
+              <!-- Boton de Continuar -->
+              <br>
+              
+              
+              <button class="btn waves-effect waves-light right teal animated pulse" type="submit" name="action" id="juego3Continuar" style="display: none;">Continuar
+              </button>
+             
+             
+              <br>
+              <br>
+
+
+
             </div>
           </div>
         </div>
@@ -346,8 +360,14 @@
   var juego2Vidas = 5;
   var colores = ["pink", "green", "red", "blue", "indigo", "teal", "cyan",  "light-blue", "light-green", "orange", "amber", "deep-orange", "blue-grey"];
 
+  // variables globales Juego 3
+  var preguntasJuego3;
+  var numPreguntaJuego3 = 0;
+  var juego3Score = 0;
+  var enEsperaJuego3 = false;
+  var juego3Vidas = 5;
 
-    var contadorPreguntas = 1 ; // nose si se usa en algun lado
+  var contadorPreguntas = 1 ; // nose si se usa en algun lado
 
   // Variables globales generales
   var enEspera = false;
@@ -385,7 +405,8 @@
   $("#selectedChips").sortable();
   $( "#selectedChips" ).disableSelection();
 
-
+  // Inicialización para el juego 3
+  getDataJuego3();
 
   // cuando se presiona Enter
   $(document).keyup(function(e){
@@ -526,6 +547,26 @@
     });
   }
 
+  // Función que carga las preguntas del .json para el Juego 3
+  function getDataJuego3() {
+    $.ajax({
+      url: 'data/juego3.json',
+      type: 'GET',
+      dataType: 'json',
+      success: function(data){
+        preguntasJuego3 = data['preguntas']; // guarda todas las preguntas en la variable preguntasJuego3
+        cargaPreguntasJuego3(); // carga una pregunta en el juego3
+      },
+      error: function(errorMsg){
+        console.log("Error en juego3.json"); // muestra error en la consola si no se pudo obtener juego3.json
+      }
+    });
+  }
+
+
+
+
+
 // ================================================== CARGA PREGUNTAS ==============================================
 
 // Función que carga una pregunta en juego 1
@@ -580,6 +621,39 @@ function cargaPreguntasJuego2(){
   $("#juego2Score").html(juego2Score); // Actualiza el score
 
 }
+
+// Función que carga una pregunta en juego 3
+function cargaPreguntasJuego3() {
+ $("#juego3Continuar").hide();
+  // TODO: animaciones
+
+  numPreguntaJuego3 = Math.floor((Math.random() * preguntasJuego3.length) + 0);
+
+  $("#preguntaJuego3 >div >img").attr('src', 'img/juego3/' + preguntasJuego3[numPreguntaJuego3].pregunta);
+
+  p = preguntasJuego3[numPreguntaJuego3];
+
+  $(".juego3Respuesta >img").eq(1).attr('src', 'img/juego3/' + p['respuesta1']);
+  $(".juego3Respuesta >img").eq(2).attr('src', 'img/juego3/' + p['respuesta2']);
+  $(".juego3Respuesta >img").eq(3).attr('src', 'img/juego3/' + p['respuesta3']);
+  $(".juego3Respuesta >img").eq(4).attr('src', 'img/juego3/' + p['respuesta4']);
+
+  $(".juego3Respuesta >img").eq(0).draggable('enable');
+  $(".juego3Respuesta >img").eq(1).draggable('enable');
+  $(".juego3Respuesta >img").eq(2).draggable('enable');
+  $(".juego3Respuesta >img").eq(3).draggable('enable');
+
+  $(".juego3Respuesta >img").eq(0).css('top', 'auto').css('left', 'auto');
+  $(".juego3Respuesta >img").eq(1).css('top', 'auto').css('left', 'auto');
+  $(".juego3Respuesta >img").eq(2).css('top', 'auto').css('left', 'auto');
+  $(".juego3Respuesta >img").eq(3).css('top', 'auto').css('left', 'auto');
+
+  $("#juego3Score").html(juego3Score); // actualiza score
+  
+}
+
+
+
 // =================================================== RESET ==============================================
 
 // resetea variables para el juego 1
@@ -605,6 +679,31 @@ function resetJuego2(){
   juego2Score = 0;
   $("#juego2Score").html(juego2Score);
 }
+
+
+// resetea variables para el juego 3
+function resetJuego3() {
+
+  //$("#juego3Continuar").hide();
+ 
+
+  //juego3Vidas = 5;
+  for (var i = juego3Vidas; i < 5; i++) {
+    $("#juego3Vidas").prepend('<i class="material-icons icon-red">favorite</i>');
+  }
+
+  juego3Score = 0;
+  $("#juego3Score").html(juego3Score);
+
+  $(".juego3Respuesta >img").eq(0).draggable('enable');
+  $(".juego3Respuesta >img").eq(1).draggable('enable');
+  $(".juego3Respuesta >img").eq(2).draggable('enable');
+  $(".juego3Respuesta >img").eq(3).draggable('enable');
+
+
+}
+
+
 
 
 // =================================================== EVALUA ==============================================
@@ -636,7 +735,7 @@ $(".juego1Respuesta").click(function (){
       });
     }
 
-    function evalua(num,resp){
+    function evalua(num,resp) {
 
 
       if (preguntasJuego1[num]['correcta'] == resp){
@@ -656,39 +755,33 @@ $(".juego1Respuesta").click(function (){
           $.playSound("sounds/error");
         }
 
+        //quita vidas
+        $("#juego1Vidas").children().eq(0).addClass("fadeOut").delay(1600).queue(function(next){
+          //$(this).removeClass("bounceOut");
+          $("#juego1Vidas").children()[0].remove();
+          next();
+        });
 
-    //quita vidas
-    $("#juego1Vidas").children().eq(0).addClass("fadeOut").delay(1600).queue(function(next){
-      //$(this).removeClass("bounceOut");
-      $("#juego1Vidas").children()[0].remove();
-      next();
-    });
+        //cambia los colores a las respuestas
+        $(".juego1Respuesta").each(function() {
+          $( this ).removeClass( "blue-grey lighten-1" ).addClass("red incorrecta");
+        });
 
+        $(".juego1Respuesta").eq(preguntasJuego1[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
 
-    
-
-
-    //cambia los colores a las respuestas
-    $(".juego1Respuesta").each(function() {
-      $( this ).removeClass( "blue-grey lighten-1" ).addClass("red incorrecta");
-    });
-
-    $(".juego1Respuesta").eq(preguntasJuego1[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
-
-    //muestra el boton de continuar
-    $("#juego1Continuar").show();
-    enEspera = true;
-    if (juego1Vidas == 0){
-      reset();
-      $('#juego1TopScore').openModal();
-      
-    }
-  }
-  contadorPreguntas ++;
-
+        //muestra el boton de continuar
+        $("#juego1Continuar").show();
+        enEspera = true;
+        if (juego1Vidas == 0){
+          reset();
+          $('#juego1TopScore').openModal();
+          
+        }
+     }
+    contadorPreguntas ++;
 }
 
-
+//--------------
 
 $("#evaluarJuego2").click(function(){
   buttonJuego2();
@@ -719,7 +812,7 @@ function buttonJuego2(){
   }else{
     Materialize.toast('Respuesta Incorrecta', 4000);
 
-    var ans = ''
+    var ans = '';
 
     for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
       ans += preguntasJuego2[numPreguntaJuego2].respuesta[i].tag;
@@ -750,6 +843,70 @@ function evaluaJuego2(){
   return true;
 }
 
+
+// Evaluacion del juego 3
+
+$("#juego3Continuar").click(function() {
+  //cambia los colores a las respuestas
+    $(".juego3Respuesta").each(function() {
+      $( this ).removeClass( "red incorrecta" ).addClass("blue-grey lighten-4");
+    });
+  cargaPreguntasJuego3();
+
+
+  });
+
+
+function evaluaJuego3(respuestaJ3){
+
+  if(preguntasJuego3[numPreguntaJuego3].correcta == respuestaJ3) {
+    Materialize.toast('Respuesta Correcta', 4000);
+    juego3Score += 10;
+    if(sonido){
+      $.playSound("sounds/correct");
+    }
+
+    $(".juego3Respuesta >img").eq(0).draggable('disable');
+    $(".juego3Respuesta >img").eq(1).draggable('disable');
+    $(".juego3Respuesta >img").eq(2).draggable('disable');
+    $(".juego3Respuesta >img").eq(3).draggable('disable');
+ 
+    cargaPreguntasJuego3();
+
+    return true;
+ 
+  } else {
+
+    $(".juego3Respuesta").eq(preguntasJuego1[numPreguntaJuego3]['correcta'] - 1).removeClass( "red" ).addClass("green");
+    juego3Vidas --;
+    Materialize.toast('Sigue Intentando', 4000); 
+    if(sonido){
+      $.playSound("sounds/error");
+    }
+    
+    $(".juego3Respuesta >img").eq(0).draggable('disable');
+    $(".juego3Respuesta >img").eq(1).draggable('disable');
+    $(".juego3Respuesta >img").eq(2).draggable('disable');
+    $(".juego3Respuesta >img").eq(3).draggable('disable');
+
+    //quita vidas
+    $("#juego3Vidas").children().eq(0).addClass("fadeOut").delay(1600).queue(function(next){
+      //$(this).removeClass("bounceOut");
+      $("#juego3Vidas").children()[0].remove();
+      next();
+    });
+     //cambia los colores a las respuestas
+    $(".juego3Respuesta").each(function() {
+      $( this ).removeClass( "blue-grey lighten-4" ).addClass("red incorrecta");
+    });
+    $("#juego3Continuar").show();
+    enEsperaJuego3 = true;
+    return false;
+  }
+
+}
+
+
 $(document).on('click',".chip-unselected",function(){
   
   var indexColor =  Math.floor((Math.random() * colores.length) + 0);
@@ -765,6 +922,8 @@ $(document).on('click',".chip-selected",function(){
 
   $(this).remove();
 });
+
+
 
 // =================================================== FIN ===================================================
 </script>
@@ -798,7 +957,9 @@ $( function() {
     },
     drop: function( event, ui ) {
 
-      alert($(this).find('p').html());
+      //alert(ui.draggable.attr("data-num"));
+      evaluaJuego3(ui.draggable.attr("data-num"));
+      
     }
   });
 
