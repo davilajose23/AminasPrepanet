@@ -89,3 +89,15 @@ i.icon-blue {
 .no-hover{
   background-color: :  #eeeeee;
 }
+
+.preg{
+  min-height: 150px !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #toast-container {
+    min-width: 100%;
+    bottom: 50% ;
+  }
+}

@@ -14,10 +14,10 @@
   <meta charset="UTF-8">
 </head>
 
-<body class="grey lighten-4">
+<body class="grey lighten-3">
 
   <!-- NavBar -->
-  <div class="navbar-fixed">
+  <div class="navbar">
     <nav>
       <div class="nav-wrapper blue">
         <a href="#!" class="brand-logo left"><img class="responsive-img center" src="img/logo.png" width="250px"></a>
@@ -46,7 +46,7 @@
     <!-- Game Selector -->
     <div id="test2" class="col s12" >
       <!-- Seleccionar Game 1 -->
-      <div class="col s4 animated fadeIn" id="tab1"> 
+      <div class="col s12 m4 animated fadeIn" id="tab1"> 
         <div class="card grey lighten-5 waves-effect hoverable active " >
           <div class="card-content ">
             <span class="card-title">Adivina el nombre</span>
@@ -54,7 +54,7 @@
         </div>
       </div>
       <!-- Seleccionar Game 2 -->
-      <div class="col s4 animated fadeIn" id="tab2"> 
+      <div class="col s12 m4 animated fadeIn" id="tab2"> 
         <div class="card grey lighten-5 waves-effect hoverable ">
           <div class="card-content ">
             <span class="card-title">Adivina la estructura</span>
@@ -63,7 +63,7 @@
       </div>
       
       <!-- Seleccionar Game 3 -->
-      <div class="col s4 animated fadeIn" id="tab3"> 
+      <div class="col s12 m4 animated fadeIn" id="tab3"> 
         <div class="card grey lighten-5 waves-effect hoverable">
           <div class="card-content ">
             <span class="card-title">Clasifica la estructura</span>
@@ -79,13 +79,13 @@
     <!-- ======================================================================================================== -->
     <!-- Juego 1 HTML -->
     <div class="col s12 m12  animated zoomIn" id ="juego1" style="display: none;"> 
-      <div class="card grey lighten-5">
+      <div class="card ">
         <div class="card-content ">
           <!-- Seccion de Sonido, Score, Vidas e Info  -->
           <p> 
             <!-- Sonido -->
             <span class="hov">
-              <i class="material-icons" id = "juego1Sound" >volume_up</i>
+              <i class="material-icons" id="juego1Sound" >volume_up</i>
             </span>
 
             <!-- Score -->
@@ -109,7 +109,7 @@
 
               <!-- Respuesta 1 -->
               <div class="col s12 m6">
-                <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="1">
+                <div class="card-panel  hoverable juego1Respuesta" data-num="1">
                   <img class="responsive-img center" src="" >
                   <p></p>
                 </div>
@@ -117,21 +117,21 @@
 
               <!-- Respuesta 2 -->
               <div class="col s12 m6">
-                <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="2">
+                <div class="card-panel  hoverable juego1Respuesta" data-num="2">
                   <img class="responsive-img center" src="" >
                 </div>
               </div>
 
               <!-- Respuesta 3 -->
               <div class="col s12 m6">
-                <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="3">
+                <div class="card-panel  hoverable juego1Respuesta" data-num="3">
                   <img class="responsive-img center" src="" >
                 </div>
               </div>
 
               <!-- Respuesta 4 -->
               <div class="col s12 m6">
-                <div class="card-panel blue-grey lighten-1 hoverable juego1Respuesta" data-num="4">
+                <div class="card-panel  hoverable juego1Respuesta" data-num="4">
                   <img class="responsive-img center" src="" >
                 </div>
               </div>
@@ -322,7 +322,7 @@
       <!--/End row-->
     </div>
     <!--/End container-->
-
+  <br><br><br>
 
     <!-- Modal Puntuacion Maxima -->
     <div id="juego1TopScore" class="modal">
@@ -352,6 +352,8 @@
   <script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
   <!--  Import jquery-ui-->
   <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
 
@@ -594,7 +596,7 @@ function reloadPregunta(){
   }
   
   $(".juego1Respuesta").each(function() {
-    $( this ).removeClass( "red incorrecta green" ).addClass( "blue-grey lighten-1");
+    $( this ).removeClass( "red incorrecta green" );//.addClass( "blue-grey lighten-1");
   });
 
   numPreguntaJuego1 = Math.floor((Math.random() * preguntasJuego1.length) + 0);
@@ -760,7 +762,7 @@ $(".juego1Respuesta").click(function (){
       if (preguntasJuego1[num]['correcta'] == resp){
         $(".juego1Respuesta").eq(preguntasJuego1[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
         juego1Score += 10;
-        Materialize.toast('Respuesta Correcta', 4000);
+        Materialize.toast('Respuesta Correcta', 2000);
         if(sonido){
           $.playSound("sounds/correct");
         }
@@ -769,7 +771,7 @@ $(".juego1Respuesta").click(function (){
       }else{
 
         juego1Vidas --;
-        Materialize.toast('Sigue Intentando', 4000); 
+        Materialize.toast('Sigue Intentando', 2000); 
         if(sonido){
          $.playSound("sounds/error");
         }
@@ -782,9 +784,8 @@ $(".juego1Respuesta").click(function (){
         });
 
         //cambia los colores a las respuestas
-        $(".juego1Respuesta").each(function() {
-          $( this ).removeClass( "blue-grey lighten-1" ).addClass("red incorrecta");
-        });
+        $(".juego1Respuesta").eq(resp).addClass("red incorrecta");
+      
 
         $(".juego1Respuesta").eq(preguntasJuego1[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
 
@@ -825,11 +826,11 @@ function buttonJuego2(){
 
   }else if (evaluaJuego2()){
     juego2Score += 10;
-    Materialize.toast('Respuesta Correcta', 4000);
+    Materialize.toast('Respuesta Correcta', 2000);
     cargaPreguntasJuego2();
 
   }else{
-    Materialize.toast('Respuesta Incorrecta', 4000);
+    Materialize.toast('Respuesta Incorrecta', 2000);
 
     var ans = '';
 
@@ -887,7 +888,7 @@ $("#juego3Continuar").click(function() {
 function evaluaJuego3(respuestaJ3) {
 
   if(preguntasJuego3[numPreguntaJuego3].correcta == respuestaJ3) {
-    Materialize.toast('Respuesta Correcta', 4000);
+    Materialize.toast('Respuesta Correcta', 2000);
     juego3Score += 10;
     if(sonido){
       $.playSound("sounds/correct");
@@ -914,7 +915,7 @@ function evaluaJuego3(respuestaJ3) {
       $('#juego3TopScore').openModal();  
       $(".juego3Respuesta").eq(preguntasJuego3[numPreguntaJuego3]['correcta'] - 1).removeClass( "red" ).addClass("green");
     
-      Materialize.toast('Sigue Intentando', 4000); 
+      Materialize.toast('Sigue Intentando', 2000); 
       if(sonido){
         $.playSound("sounds/error");
       }
@@ -935,7 +936,7 @@ function evaluaJuego3(respuestaJ3) {
 
     $(".juego3Respuesta").eq(preguntasJuego3[numPreguntaJuego3]['correcta'] - 1).removeClass( "red" ).addClass("green");
     
-    Materialize.toast('Sigue Intentando', 4000); 
+    Materialize.toast('Sigue Intentando', 2000); 
     if(sonido){
       $.playSound("sounds/error");
     }
