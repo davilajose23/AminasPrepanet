@@ -90,6 +90,13 @@ i.icon-blue {
   background-color: :  #eeeeee;
 }
 
+td{
+  border: 1px solid white;
+}
+
+th{
+    border: 1px solid white;
+}
 .preg{
   min-height: 150px !important;
 }
