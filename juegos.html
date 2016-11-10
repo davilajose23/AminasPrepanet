@@ -206,6 +206,7 @@
 
               <!--  Pregunta -->
               <img class="responsive-img center" src="">
+              <h4></h4>
               <br>
 
               <!--  Respuesta del Usuario -->
@@ -728,7 +729,17 @@ function cargaPreguntasJuego2(){
   numPreguntaJuego2 = Math.floor((Math.random() * preguntasJuego2.length) + 0);
   var tags = preguntasJuego2[numPreguntaJuego2].tags;
 
-  $("#preguntaJuego2 >img").attr('src', 'img/juego2/' + preguntasJuego2[numPreguntaJuego2].pregunta);
+
+  $("#preguntaJuego2 >h4").html("");
+  $("#preguntaJuego2 >img").attr('src','');
+
+  if (preguntasJuego2[numPreguntaJuego2].tipo == "imagen"){
+    $("#preguntaJuego2 >img").attr('src', 'img/juego2/' + preguntasJuego2[numPreguntaJuego2].pregunta);  
+  }else{
+    $("#preguntaJuego2 >h4").html(preguntasJuego2[numPreguntaJuego2].pregunta);
+  }
+
+  
 
   // agrega cada uno de los tags a las opciones de respuestas
   $.each(tags, function(i, val){
