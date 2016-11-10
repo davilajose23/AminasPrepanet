@@ -202,7 +202,7 @@
             <div class="center" id="preguntaJuego2">
 
               <!--  Respuesta Correcta-->
-              <h5 id="respuestaJuego2" class="animated fadeIn"><br></h5>
+              <h5 id="respuestaJuego2" class="animated fadeIn green-text"><br></h5>
 
               <!--  Pregunta -->
               <img class="responsive-img center" src="">
@@ -926,7 +926,7 @@ function buttonJuego2(){
     if(juego2Vidas == 0){
       //modal ya perdio
       resetJuego2();
-      alert("ya perdio");
+      //alert("ya perdio");
     }
 
     $("#evaluarJuego2").html("Evaluar");
@@ -951,7 +951,7 @@ function buttonJuego2(){
     for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
       ans += preguntasJuego2[numPreguntaJuego2].respuesta[i].tag;
     }
-    $("#respuestaJuego2").html("Respuesta: " + ans);
+    $("#respuestaJuego2").html("<strong>Respuesta:</strong> " + ans );
     enEsperaJuego2 = true;
     $("#evaluarJuego2").html("continuar");
 
