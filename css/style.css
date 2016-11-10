@@ -108,3 +108,7 @@ th{
     bottom: 50% ;
   }
 }
+
+.blue-navbar {
+    background-color: #0678CB !important;
+}

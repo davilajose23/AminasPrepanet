@@ -23,7 +23,7 @@
   <!-- NavBar -->
   <div class="navbar">
     <nav>
-      <div class="nav-wrapper blue">
+      <div class="nav-wrapper blue-navbar">
         <a href="#!" class="brand-logo left hide-on-med-and-down"><img class="responsive-img center" src="img/logo.png" width="250px"></a>
         <a href="#!" class="brand-logo right hide-on-med-and-down"><img class="responsive-img " src="img/logoPrepanet.png" width="230px"></a>
         <a href="#!" class="brand-logo center"><img class="responsive-img" src="img/logoTecBlanco.png" width="230px"></a>
@@ -209,8 +209,8 @@
               <br>
 
               <!--  Respuesta del Usuario -->
-              <div id ="selectedChips">
-
+              <div id ="selectedChips" class="connectedSortable">
+                
               </div>
 
               <!--  division -->
@@ -218,7 +218,7 @@
               <br>
 
               <!--  Opciones de respuesta -->
-              <div id="unselectedChips">
+              <div id="unselectedChips" class="connectedSortable">
               </div>
 
             </div>
@@ -440,20 +440,40 @@
 
   // Inicialización para el juego 2
   getDataJuego2();
-  $("#selectedChips").sortable();
-  $( "#selectedChips" ).disableSelection();
+  $( "#selectedChips, #unselectedChips" ).sortable({
+      connectWith: ".connectedSortable"
+    }).disableSelection();
+
+  $("#selectedChips").sortable({
+    receive: function( event, ui ) {
+      var indexColor =  Math.floor((Math.random() * colores.length) + 0);
+      ui.item.addClass("white-text " + colores[indexColor] );
+    }
+  });
+
+  $("#unselectedChips").sortable({
+    receive: function( event, ui ) {
+      ui.item.removeClass("white-text");
+
+      for(var i = 0; i < colores.length ; i++){
+         ui.item.removeClass(colores[i]);
+      }
+      
+      
+    }
+  });
 
   // Inicialización para el juego 3
   getDataJuego3();
 
   // cuando se presiona Enter
   $(document).keyup(function(e){
-    if(e.keyCode == 13 && juegoActivo == 2) {
+    if((e.keyCode ==  13 || e.keyCode ==  32) && juegoActivo == 2) {
       buttonJuego2();
 
-    }else if (e.keyCode ==  13 && juegoActivo == 1) {
+    }else if ((e.keyCode ==  13 || e.keyCode ==  32) && juegoActivo == 1) {
       clickJuego1Continuar();
-    } else if (e.keyCode ==  13 && juegoActivo == 3) {
+    } else if ((e.keyCode ==  13 || e.keyCode ==  32) && juegoActivo == 3) {
 
       if ($('#juego3Continuar').is(":visible")) {
         $('#juego3Continuar').trigger('click');
@@ -702,7 +722,7 @@ function cargaPreguntasJuego2(){
   });
 
   // elimina los tags de la pregunta anterior
-  $("#selectedChips").html("");
+  $("#selectedChips").html("<br>");
   $("#unselectedChips").html("");
 
   // obtiene un numero random para la siguiente pregunta
