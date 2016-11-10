@@ -111,34 +111,42 @@
             
             <!-- Respuestas -->
             <div class="row ">
-
-              <!-- Respuesta 1 -->
-              <div class="col s12 m6">
-                <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="1">
-                  <img class="responsive-img center" src="" >
-                  <p></p>
+                
+              <div class="row">
+                <!-- Respuesta 1 -->
+                <div class="col s12 m6">
+                  <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="1">
+                    <img class="responsive-img center" src="" >
+                    <p></p>
+                  </div>
                 </div>
+
+
+                <!-- Respuesta 2 -->
+                <div class="col s12 m6">
+                  <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="2">
+                    <img class="responsive-img center" src="" >
+                  </div>
+                </div>
+
               </div>
 
-              <!-- Respuesta 2 -->
-              <div class="col s12 m6">
-                <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="2">
-                  <img class="responsive-img center" src="" >
+              <div class="row">
+  
+                <!-- Respuesta 3 -->
+                <div class="col s12 m6">
+                  <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="3">
+                    <img class="responsive-img center" src="" >
+                  </div>
                 </div>
-              </div>
 
-              <!-- Respuesta 3 -->
-              <div class="col s12 m6">
-                <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="3">
-                  <img class="responsive-img center" src="" >
+                <!-- Respuesta 4 -->
+                <div class="col s12 m6">
+                  <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="4">
+                    <img class="responsive-img center" src="" >
+                  </div>
                 </div>
-              </div>
-
-              <!-- Respuesta 4 -->
-              <div class="col s12 m6">
-                <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="4">
-                  <img class="responsive-img center" src="" >
-                </div>
+              
               </div>
             </div>
             <!--/End Respuestas -->
@@ -583,13 +591,13 @@
         $(".juego1Respuesta").eq(3).html(p['respuesta4']);
         */
 
-        /*
+        
         $(".juego1Respuesta > img").eq(0).attr('src', 'img/juego1/' + p['respuesta1']);
         $(".juego1Respuesta > img").eq(1).attr('src', 'img/juego1/' + p['respuesta2']);
         $(".juego1Respuesta > img").eq(2).attr('src', 'img/juego1/' + p['respuesta3']);
         $(".juego1Respuesta > img").eq(3).attr('src', 'img/juego1/' + p['respuesta4']);
-        */
         
+
         $("#juego1Score").html(juego1Score);
 
         for(var i = 0; i < juego1Vidas ; i++){
@@ -665,10 +673,18 @@ function reloadPregunta(){
   p = preguntasJuego1[numPreguntaJuego1];
   $("#juego1Pregunta").html(p['pregunta']);
 
+/*
   $(".juego1Respuesta").eq(0).html(p['respuesta1']);
   $(".juego1Respuesta").eq(1).html(p['respuesta2']);
   $(".juego1Respuesta").eq(2).html(p['respuesta3']);
   $(".juego1Respuesta").eq(3).html(p['respuesta4']);
+*/
+
+  $(".juego1Respuesta > img").eq(0).attr('src', 'img/juego1/' + p['respuesta1']);
+  $(".juego1Respuesta > img").eq(1).attr('src', 'img/juego1/' + p['respuesta2']);
+  $(".juego1Respuesta > img").eq(2).attr('src', 'img/juego1/' + p['respuesta3']);
+  $(".juego1Respuesta > img").eq(3).attr('src', 'img/juego1/' + p['respuesta4']);
+  
   
   $("#juego1Score").html(juego1Score); // actualiza score
   
