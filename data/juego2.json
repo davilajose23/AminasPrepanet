@@ -52,7 +52,7 @@
 		"pregunta":"Nombre de la Estructura HOOCCH<sub>2</sub>NH<sub>2</sub>",
 		"tags" :[
 			{"tag" : "2-"},
-			{"tag" : "Ácido"},
+			{"tag" : "-metil"},
 			{"tag" : "penta"},
 			{"tag" : "bencenol"},
 			{"tag" : "3-"},
@@ -60,8 +60,7 @@
 			{"tag" : "Ácido"},
 			{"tag" : "amino"},
 			{"tag" : "2-"},
-			{"tag" : "eta"},
-			{"tag" : "noico"}
+			{"tag" : "eta"}
 		],
 		"respuesta" : [
 			{"tag" : "Ácido"},
@@ -202,7 +201,7 @@
 		"pregunta":"P3.png",
 		"tags" :[
 			{"tag" : "Ácido"},
-			{"tag" : "-1"},
+			{"tag" : "-1,"},
 			{"tag" : "4-"},
 			{"tag" : "hexa"},
 			{"tag" : "3-"},
@@ -258,7 +257,7 @@
 			{"tag" : "noico"},
 			{"tag" : "hexa"},
 			{"tag" : "-5"},
-			{"tag" : "penta"},
+			{"tag" : "octa"},
 			{"tag" : "metil"},
 			{"tag" : "Ácido"},
 			{"tag" : "2-,"},
