@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta charset="UTF-8">
   <title>Aminas Juegos</title>
-  <link rel="shortcut icon" href="img/favicon.ico"/>
+  <link rel="shortcut icon" href="img/icono.png"/>
 </head>
 
 <body class="grey lighten-3">
@@ -80,7 +80,7 @@
     <!-- ================================================= JUEGO 1 ============================================== -->
     <!-- ======================================================================================================== -->
     <!-- Juego 1 HTML -->
-    <div class="col s12 m12  animated zoomIn" id ="juego1" style="display: none;"> 
+    <div class="col s12 m12  animated zoomIn " id ="juego1" style="display: none;"> 
       <div class="card ">
         <div class="card-content ">
           <!-- Seccion de Sonido, Score, Vidas e Info  -->
@@ -111,7 +111,7 @@
 
               <!-- Respuesta 1 -->
               <div class="col s12 m6">
-                <div class="card-panel  hoverable juego1Respuesta" data-num="1">
+                <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="1">
                   <img class="responsive-img center" src="" >
                   <p></p>
                 </div>
@@ -119,21 +119,21 @@
 
               <!-- Respuesta 2 -->
               <div class="col s12 m6">
-                <div class="card-panel  hoverable juego1Respuesta" data-num="2">
+                <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="2">
                   <img class="responsive-img center" src="" >
                 </div>
               </div>
 
               <!-- Respuesta 3 -->
               <div class="col s12 m6">
-                <div class="card-panel  hoverable juego1Respuesta" data-num="3">
+                <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="3">
                   <img class="responsive-img center" src="" >
                 </div>
               </div>
 
               <!-- Respuesta 4 -->
               <div class="col s12 m6">
-                <div class="card-panel  hoverable juego1Respuesta" data-num="4">
+                <div class="card-panel  hoverable juego1Respuesta grey lighten-2" data-num="4">
                   <img class="responsive-img center" src="" >
                 </div>
               </div>
@@ -499,6 +499,16 @@
     });
   }
 
+  // Funcion que agrega animación de salida a un objeto con cierto delay
+  function animacion2(objeto, anima, delay){
+    $(objeto).addClass(anima).delay(delay).queue(function(next){
+      $(objeto).hide();
+      $(this).removeClass(anima);
+      $(objecto).show();
+      next();
+    });
+  }
+
   // Funcion que activa o desactiva el sonido del juego
   function sonido(objeto){
     if(sonido){
@@ -598,7 +608,7 @@ function reloadPregunta(){
   }
   
   $(".juego1Respuesta").each(function() {
-    $( this ).removeClass( "red incorrecta green" );//.addClass( "blue-grey lighten-1");
+    $( this ).removeClass( "red incorrecta green" ).addClass( "grey lighten-2");
   });
 
   numPreguntaJuego1 = Math.floor((Math.random() * preguntasJuego1.length) + 0);
@@ -620,8 +630,11 @@ function reloadPregunta(){
 
 // Función que carga una pregunta en juego 2
 function cargaPreguntasJuego2(){
-
-  animacion("#juego2", "fadeOutDown", 300); // agrega animación a juego2 para el cambio de pregunta
+ 
+  $("#juego2").addClass("zoomOut").delay(400).queue(function(next){
+    $(this).removeClass("zoomOut");
+    next();
+  });
 
   // elimina los tags de la pregunta anterior
   $("#selectedChips").html("");
@@ -639,6 +652,7 @@ function cargaPreguntasJuego2(){
    });
 
   $("#juego2Score").html(juego2Score); // Actualiza el score
+  
 
 }
 
@@ -786,10 +800,10 @@ $(".juego1Respuesta").click(function (){
         });
 
         //cambia los colores a las respuestas
-        $(".juego1Respuesta").eq(resp).addClass("red incorrecta");
-      
+        $(".juego1Respuesta").eq(resp - 1).addClass("red incorrecta").removeClass("grey lighten-2");
+    
 
-        $(".juego1Respuesta").eq(preguntasJuego1[num]['correcta'] - 1).removeClass( "red" ).addClass("green");
+        $(".juego1Respuesta").eq(preguntasJuego1[num]['correcta'] - 1).removeClass("grey lighten-2").addClass("green");
 
         //muestra el boton de continuar
         $("#juego1Continuar").show();
@@ -822,6 +836,7 @@ function buttonJuego2(){
 
     $("#evaluarJuego2").html("Evaluar");
     $("#respuestaJuego2").html("<br>");
+
     //recarga otra pregunta
     cargaPreguntasJuego2();
 
