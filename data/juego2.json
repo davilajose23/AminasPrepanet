@@ -1,52 +1,305 @@
 {"preguntas":[
     {
-    	"pregunta":"pregunta1.png", 
+    	"pregunta":"Nombre de la Estructura CH<sub>3</sub>CH<sub>2</sub>CH(CH<sub>3</sub>)CH(NH<sub>2</sub>)COOH ",
     	"tags" :[ 
-    		{"tag" : "3-"},
-    		{"tag" : "4-"},
-    		{"tag" : "(2-aminoetil)"},
+    		{"tag" : "1-"},
+    		{"tag" : "Ácido"},
+    		{"tag" : "amino-"},
     		{"tag" : "metil"},
     		{"tag" : "bencenol"},
-    		{"tag" : "(2-aminometil)"},
+    		{"tag" : "pentanoico"},
     		{"tag" : "benceno"},
     		{"tag" : "ol"},
     		{"tag" : "2-"},
-    		{"tag" :  "diol"},
-    		{"tag" :  "-1"}
+    		{"tag" : "diol"},
+    		{"tag" : "3-"}
     	],
     	"respuesta" : [
-    		{"tag" : "4-"},
-    		{"tag" : "(2-aminoetil)"},
-    		{"tag" : "benceno"},
-    		{"tag" : "-1"},
+    		{"tag" : "Ácido"},
     		{"tag" : "2-"},
-    		{"tag" : "diol"}
+    		{"tag" : "amino-"},
+    		{"tag" : "3-"},
+    		{"tag" : "metil"},
+    		{"tag" : "pentanoico"}
     	],
     	"tipo" : "imagen"
     },
     {
-    	"pregunta":"pregunta1.png", 
+    	"pregunta":"P2.png",
     	"tags" :[ 
     		{"tag" : "3-"},
-    		{"tag" : "4-"},
-    		{"tag" : "(2-aminoetil)"},
+    		{"tag" : "noico"},
+    		{"tag" : "-(aminoetil)"},
     		{"tag" : "metil"},
-    		{"tag" : "bencenol"},
-    		{"tag" : "(2-aminometil)"},
+    		{"tag" : "hidro"},
+    		{"tag" : "Ácido"},
     		{"tag" : "benceno"},
-    		{"tag" : "ol"},
+    		{"tag" : "amino"},
     		{"tag" : "2-"},
-    		{"tag" :  "diol"},
-    		{"tag" :  "-1"}
+    		{"tag" : "diol"},
+    		{"tag" : "propa"}
     	],
     	"respuesta" : [
-    		{"tag" : "4-"},
-    		{"tag" : "(2-aminoetil)"},
-    		{"tag" : "benceno"},
-    		{"tag" : "-1"},
+    		{"tag" : "Ácido"},
     		{"tag" : "2-"},
-    		{"tag" : "diol"}
+    		{"tag" : "amino"},
+    		{"tag" : "propa"},
+			{"tag" : "noico"}
     	],
     	"tipo" : "imagen"
-    }
+    },
+	{
+		"pregunta":"Nombre de la Estructura HOOCCH<sub>2</sub>NH<sub>2</sub>",
+		"tags" :[
+			{"tag" : "2-"},
+			{"tag" : "Ácido"},
+			{"tag" : "penta"},
+			{"tag" : "bencenol"},
+			{"tag" : "3-"},
+			{"tag" : "noico"},
+			{"tag" : "Ácido"},
+			{"tag" : "amino"},
+			{"tag" : "2-"},
+			{"tag" : "eta"},
+			{"tag" : "noico"}
+		],
+		"respuesta" : [
+			{"tag" : "Ácido"},
+			{"tag" : "2-"},
+			{"tag" : "amino"},
+			{"tag" : "eta"},
+			{"tag" : "noico"}
+		],
+		"tipo" : "imagen"
+	},
+	{
+		"pregunta":"¿Cuál es el nombre IUPAC de la estructura: OHCH<sub>2</sub>CH(NH<sub>2</sub>)COOH",
+		"tags" :[
+			{"tag" : "N'"},
+			{"tag" : "butano"},
+			{"tag" : "amino-"},
+			{"tag" : "(3-aminopropil)"},
+			{"tag" : "hidroxi"},
+			{"tag" : "noico"},
+			{"tag" : "Ácido"},
+			{"tag" : "ol"},
+			{"tag" : "2-"},
+			{"tag" : "propa"},
+			{"tag" : "3-"}
+		],
+		"respuesta" : [
+			{"tag" : "Ácido"},
+			{"tag" : "2-"},
+			{"tag" : "amino-"},
+			{"tag" : "3-"},
+			{"tag" : "hidroxi"},
+			{"tag" : "propa"},
+			{"tag" : "noico"}
+		],
+		"tipo" : "imagen"
+	},
+	{
+		"pregunta":"Nombre de la Estructura NH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>NH<sub>2</sub>",
+		"tags" :[
+			{"tag" : "Ciclo"},
+			{"tag" : "hexa"},
+			{"tag" : "penta"},
+			{"tag" : "bencenol"},
+			{"tag" : "3-"},
+			{"tag" : "5-"},
+			{"tag" : "Ácido"},
+			{"tag" : "amina"},
+			{"tag" : "1,"},
+			{"tag" : "diol"},
+			{"tag" : "nodi"}
+		],
+		"respuesta" : [
+			{"tag" : "1,"},
+			{"tag" : "5-"},
+			{"tag" : "penta"},
+			{"tag" : "nodi"},
+			{"tag" : "amina"}
+		],
+		"tipo" : "imagen"
+	},
+	{
+		"pregunta":"Nombre de la IUPAC de la Leucina",
+		"tags" :[
+			{"tag" : "noico"},
+			{"tag" : "-metil"},
+			{"tag" : "hidro"},
+			{"tag" : "tri"},
+			{"tag" : "-4"},
+			{"tag" : "octa"},
+			{"tag" : "diol"},
+			{"tag" : "amino"},
+			{"tag" : "2-"},
+			{"tag" : "Ácido"},
+			{"tag" : "penta"}
+		],
+		"respuesta" : [
+			{"tag" : "Ácido"},
+			{"tag" : "2-"},
+			{"tag" : "amino"},
+			{"tag" : "-4"},
+			{"tag" : "-metil"},
+			{"tag" : "penta"},
+			{"tag" : "noico"}
+		],
+		"tipo" : "imagen"
+	},
+	{
+		"pregunta":"Nombre de la IUPAC de la estructura: NH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>NH<sub>2</sub>",
+		"tags" :[
+			{"tag" : "Ácido"},
+			{"tag" : "-metil"},
+			{"tag" : "tri"},
+			{"tag" : "propano"},
+			{"tag" : "1,"},
+			{"tag" : "amina"},
+			{"tag" : "diol"},
+			{"tag" : "-metil"},
+			{"tag" : "2-"},
+			{"tag" : "3-"},
+			{"tag" : "di"}
+		],
+		"respuesta" : [
+			{"tag" : "1,"},
+			{"tag" : "3-"},
+			{"tag" : "propano"},
+			{"tag" : "di"},
+			{"tag" : "amina"}
+		],
+		"tipo" : "imagen"
+	},
+	{
+		"pregunta":"Nombre de la IUPAC de la Lisina",
+		"tags" :[
+			{"tag" : "tri"},
+			{"tag" : "Ácido"},
+			{"tag" : "noico"},
+			{"tag" : "6-"},
+			{"tag" : "4-"},
+			{"tag" : "di"},
+			{"tag" : "diol"},
+			{"tag" : "hexa"},
+			{"tag" : "2,"},
+			{"tag" : "ol"},
+			{"tag" : "amino"}
+		],
+		"respuesta" : [
+			{"tag" : "Ácido"},
+			{"tag" : "2,"},
+			{"tag" : "6-"},
+			{"tag" : "di"},
+			{"tag" : "amino"},
+			{"tag" : "hexa"},
+			{"tag" : "noico"}
+		],
+		"tipo" : "imagen"
+	},
+	{
+		"pregunta":"P3.png",
+		"tags" :[
+			{"tag" : "Ácido"},
+			{"tag" : "-1"},
+			{"tag" : "4-"},
+			{"tag" : "hexa"},
+			{"tag" : "3-"},
+			{"tag" : "ol"},
+			{"tag" : "diol"},
+			{"tag" : "benceno"},
+			{"tag" : "2-,"},
+			{"tag" : "ol"},
+			{"tag" : "(2-aminoetil)"}
+		],
+		"respuesta" : [
+			{"tag" : "4-"},
+			{"tag" : "(2-aminoetil)"},
+			{"tag" : "benceno"},
+			{"tag" : "-1,"},
+			{"tag" : "2-"},
+			{"tag" : "diol"}
+		],
+		"tipo" : "imagen"
+	},
+	{
+		"pregunta":"P4.png",
+		"tags" :[
+			{"tag" : "-metil"},
+			{"tag" : "-4-"},
+			{"tag" : "noico"},
+			{"tag" : "amino"},
+			{"tag" : "moil"},
+			{"tag" : "di"},
+			{"tag" : "buta"},
+			{"tag" : "hexa"},
+			{"tag" : "2-"},
+			{"tag" : "carba"},
+			{"tag" : "Ácido"}
+		],
+		"respuesta" : [
+			{"tag" : "Ácido"},
+			{"tag" : "2-"},
+			{"tag" : "amino"},
+			{"tag" : "-4-"},
+			{"tag" : "carba"},
+			{"tag" : "moil"},
+			{"tag" : "buta"},
+			{"tag" : "noico"}
+		],
+		"tipo" : "imagen"
+	},
+	{
+		"pregunta":"Nombre IUPAC de la siguiente estructura: (NH<sub>2</sub>CH(NH<sub>2</sub>)NH)CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)COOH",
+		"tags" :[
+			{"tag" : "-(diaminometilidenoamino)"},
+			{"tag" : "amino"},
+			{"tag" : "noico"},
+			{"tag" : "hexa"},
+			{"tag" : "-5"},
+			{"tag" : "penta"},
+			{"tag" : "metil"},
+			{"tag" : "Ácido"},
+			{"tag" : "2-,"},
+			{"tag" : "ol"},
+			{"tag" : "penta"}
+		],
+		"respuesta" : [
+			{"tag" : "Ácido"},
+			{"tag" : "2-"},
+			{"tag" : "amino"},
+			{"tag" : "-5"},
+			{"tag" : "-(diaminometilidenoamino)"},
+			{"tag" : "penta"},
+			{"tag" : "noico"}
+		],
+		"tipo" : "imagen"
+	},
+	{
+		"pregunta":"Nombre IUPAC de la siguiente estructura: SHCH<sub>2</sub>CH(NH<sub>2</sub>)COOH",
+		"tags" :[
+			{"tag" : "-3-"},
+			{"tag" : "-1"},
+			{"tag" : "sulfanil"},
+			{"tag" : "hexa"},
+			{"tag" : "noico"},
+			{"tag" : "amino"},
+			{"tag" : "Ácido"},
+			{"tag" : "tri"},
+			{"tag" : "propa"},
+			{"tag" : "butano"},
+			{"tag" : "2-"}
+		],
+		"respuesta" : [
+			{"tag" : "Ácido"},
+			{"tag" : "2-"},
+			{"tag" : "amino"},
+			{"tag" : "-3-"},
+			{"tag" : "sulfanil"},
+			{"tag" : "propa"},
+			{"tag" : "noico"}
+		],
+		"tipo" : "imagen"
+	}
 ]}

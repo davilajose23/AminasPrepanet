@@ -2,85 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c9ba0c2-935e-4d47-ab72-c1f6d181dab2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R1_9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R2_9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R3_9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/quiz/R4_9.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/juego1.json" afterPath="$PROJECT_DIR$/data/juego1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/quiz.json" afterPath="$PROJECT_DIR$/data/quiz.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/juego2.json" afterPath="$PROJECT_DIR$/data/juego2.json" />
     </list>
     <ignored path="AminasPrepanet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,22 +24,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="juego1.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/juego1.json">
+      <file leaf-file-name="juego2.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/juego2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="3">
+              <caret line="136" column="30" selection-start-line="136" selection-start-column="30" selection-end-line="136" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="juego2.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/juego2.json">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="648">
+              <caret line="188" column="55" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
+              <folding>
+                <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#9;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,19 +62,6 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
-              <folding>
-                <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#8;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -175,6 +87,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/data/juego1.json" />
         <option value="$PROJECT_DIR$/data/quiz.json" />
+        <option value="$PROJECT_DIR$/data/juego2.json" />
       </list>
     </option>
   </component>
@@ -231,6 +144,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AminasPrepanet" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AminasPrepanet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AminasPrepanet" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AminasPrepanet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AminasPrepanet" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="juego2" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -296,12 +241,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478719101222</updated>
-      <workItem from="1478719103855" duration="17890000" />
+      <workItem from="1478719103855" duration="23582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17890000" />
+    <option name="totallyTimeSpent" value="23582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -398,30 +343,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/juego2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/juego3.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#8;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,8 +361,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/juego1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-663">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="188" column="55" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#9;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/juego2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="136" column="30" selection-start-line="136" selection-start-column="30" selection-end-line="136" selection-end-column="30" />
           <folding />
         </state>
       </provider>
