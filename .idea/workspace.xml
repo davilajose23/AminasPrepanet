@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c9ba0c2-935e-4d47-ab72-c1f6d181dab2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/juego2.json" afterPath="$PROJECT_DIR$/data/juego2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/juegos.html" afterPath="$PROJECT_DIR$/juegos.html" />
     </list>
     <ignored path="AminasPrepanet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +38,8 @@
       <file leaf-file-name="juego2.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/juego2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="304" column="2" selection-start-line="304" selection-start-column="2" selection-end-line="304" selection-end-column="2" />
+            <state relative-caret-position="3740">
+              <caret line="220" column="24" selection-start-line="220" selection-start-column="24" selection-end-line="220" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -224,12 +222,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478719101222</updated>
-      <workItem from="1478719103855" duration="23895000" />
+      <workItem from="1478719103855" duration="24282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23895000" />
+    <option name="totallyTimeSpent" value="24282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -362,8 +360,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/juego2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="304" column="2" selection-start-line="304" selection-start-column="2" selection-end-line="304" selection-end-column="2" />
+        <state relative-caret-position="3740">
+          <caret line="220" column="24" selection-start-line="220" selection-start-column="24" selection-end-line="220" selection-end-column="24" />
           <folding />
         </state>
       </provider>
