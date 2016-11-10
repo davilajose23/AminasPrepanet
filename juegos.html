@@ -556,7 +556,6 @@
         title: 'Correcto',
         timer: 2000,
         type: 'success',
-        
         padding: 0,
         showConfirmButton:false
         //background: 'rgba(0,0,0,0)'
@@ -958,13 +957,15 @@ function buttonJuego2(){
 }
 
 function evaluaJuego2(){
-  if (preguntasJuego2[numPreguntaJuego2].respuesta.length != $("#selectedChips").children().length){
+  if (preguntasJuego2[numPreguntaJuego2].respuesta.length != $("#selectedChips").children().length - 1){
+    
     return false;
   }
 
   for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
-    if (preguntasJuego2[numPreguntaJuego2].respuesta[i].tag != $("#selectedChips").children().eq(i).children('span').text())
+    if (preguntasJuego2[numPreguntaJuego2].respuesta[i].tag != $("#selectedChips").children().eq(i + 1).children('span').text()){
       return false;  
+    }
   }
   return true;
 }
