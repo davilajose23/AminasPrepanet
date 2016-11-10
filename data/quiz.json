@@ -1,0 +1,155 @@
+
+{"preguntas":[
+    {
+    	"pregunta":  "¿Cuál es la estructura de 1,3-Propanodiamina?",
+    	"respuesta1":"R1_1.png",
+    	"respuesta2":"R2_1.png",
+    	"respuesta3":"R3_1.png",
+    	"respuesta4":"R4_1.png",
+    	"correcta":1
+    },
+    {   
+        "pregunta":  "¿Cuál es la estructura de: 1,5-Pentanodiamina?",
+        "respuesta1":"R1_2.png",
+        "respuesta2":"R2_2.png",
+        "respuesta3":"R3_2.png",
+        "respuesta4":"R4_2.png",
+        "correcta":3
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura en de la Ciclohexamina?",
+        "respuesta1":"R1_3.png",
+        "respuesta2":"R2_3.png",
+        "respuesta3":"R3_3.png",
+        "respuesta4":"R4_3.png",
+        "correcta":2
+    },
+    {
+        "pregunta":  "¿Cuál es una Amina de Reacción por Sustitución?",
+        "respuesta1":"R1_4.png",
+        "respuesta2":"R2_4.png",
+        "respuesta3":"R3_4.png",
+        "respuesta4":"R4_4.png",
+        "correcta":4
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura de N’-[3-(3-aminopropilamino)propil]propano-1,3-diamina?",
+        "respuesta1":"R1_5.png",
+        "respuesta2":"R2_5.png",
+        "respuesta3":"R3_5.png",
+        "respuesta4":"R4_5.png",
+        "correcta":2
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura de N’-(3-aminopropil)-propano-1,3-diamina?",
+        "respuesta1":"R1_6.png",
+        "respuesta2":"R2_6.png",
+        "respuesta3":"R3_6.png",
+        "respuesta4":"R4_6.png",
+        "correcta":4
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura de NH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>NHCH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>NHCH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>NH<sub>2</sub>?",
+        "respuesta1":"R1_7.png",
+        "respuesta2":"R2_7.png",
+        "respuesta3":"R3_7.png",
+        "respuesta4":"R4_7.png",
+        "correcta":3
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura del Ácido 2-amino-3-sulfanilpropanoico?",
+        "respuesta1":"R1_8.png",
+        "respuesta2":"R2_8.png",
+        "respuesta3":"R3_8.png",
+        "respuesta4":"R4_8.png",
+        "correcta":1
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura del Ácido 2-amino-4-metiltiobutanoico ",
+        "respuesta1":"R1_9.png",
+        "respuesta2":"R2_9.png",
+        "respuesta3":"R3_9.png",
+        "respuesta4":"R4_9.png",
+        "correcta":2
+    },
+    {
+        "pregunta":  "¿Cuál es la estrucutura de (NH<sub>2</sub>CH(NH<sub>2</sub>)NH)CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)COOH?",
+        "respuesta1":"R1_10.png",
+        "respuesta2":"R2_10.png",
+        "respuesta3":"R3_10.png",
+        "respuesta4":"R4_10.png",
+        "correcta":3
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura de CH<sub>3</sub>CH(CH<sub>3</sub>)CH<sub>2</sub>CH(NH<sub>2</sub>)COOH?",
+        "respuesta1":"R1_11.png",
+        "respuesta2":"R2_11.png",
+        "respuesta3":"R3_11.png",
+        "respuesta4":"R4_11.png",
+        "correcta":1
+    },
+    {
+        "pregunta":  "Identifica la estructura de  Ácido 2-aminopropanoico",
+        "respuesta1":"R1_12.png",
+        "respuesta2":"R2_12.png",
+        "respuesta3":"R3_12.png",
+        "respuesta4":"R4_12.png",
+        "correcta":3
+    },
+    {
+        "pregunta":  "Identifica la estructura en 3D de la estructura condensada de OHCH<sub>2</sub>CH(NH<sub>2</sub>)COOH",
+        "respuesta1":"R1_13.png",
+        "respuesta2":"R2_13.png",
+        "respuesta3":"R3_13.png",
+        "respuesta4":"R4_13.png",
+        "correcta":4
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura de un Anión Imidazol?",
+        "respuesta1":"R1_14.png",
+        "respuesta2":"R2_14.png",
+        "respuesta3":"R3_14.png",
+        "respuesta4":"R4_14.png",
+        "correcta":1
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura de la dopamina (4-(2-aminoetil)-benceno-1,2-dio)?",
+        "respuesta1":"R1_15.png",
+        "respuesta2":"R2_15.png",
+        "respuesta3":"R3_15.png",
+        "respuesta4":"R4_15.png",
+        "correcta":3
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura de putrescina (1,4-butanodiamina)?",
+        "respuesta1":"R1_16.png",
+        "respuesta2":"R2_16.png",
+        "respuesta3":"R3_16.png",
+        "respuesta4":"R4_16.png",
+        "correcta":3
+    },
+    {
+        "pregunta":  "Identifica la estructura en 3D de 3-bromo-1-pentamina",
+        "respuesta1":"R1_17.png",
+        "respuesta2":"R2_17.png",
+        "respuesta3":"R3_17.png",
+        "respuesta4":"R4_17.png",
+        "correcta":2
+    },
+    {
+        "pregunta":  "Identifica la estructura de Tirosina Ácido 2-Amino-3-(4-hidroxifenil)-propanoico",
+        "respuesta1":"R1_18.png",
+        "respuesta2":"R2_18.png",
+        "respuesta3":"R3_18.png",
+        "respuesta4":"R4_18.png",
+        "correcta":4
+    },
+    {
+        "pregunta":  "¿Cuál es la estructura de un Imidazol Protonado?",
+        "respuesta1":"R1_19.png",
+        "respuesta2":"R2_19.png",
+        "respuesta3":"R3_19.png",
+        "respuesta4":"R4_19.png",
+        "correcta":1
+    }
+]}
