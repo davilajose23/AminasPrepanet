@@ -1,37 +1,108 @@
 
 {"preguntas":[
     {
-    	"pregunta":  "pregunta1.png", 
-    	"respuesta1":"respuesta1.png",
-    	"respuesta2":"respuesta2.png",
-    	"respuesta3":"respuesta3.png",
-    	"respuesta4":"respuesta4.png",
+    	"pregunta":  "P1.png",
+    	"respuesta1":"R1_1.png",
+    	"respuesta2":"R2_1.png",
+    	"respuesta3":"R3_1.png",
+    	"respuesta4":"R4_1.png",
     	"correcta":1
     },
     
     {   
-        "pregunta":  "pregunta1.png", 
-        "respuesta1":"respuesta3.png",
-        "respuesta2":"respuesta3.png",
-        "respuesta3":"respuesta3.png",
-        "respuesta4":"respuesta3.png",
+        "pregunta":  "P2.png",
+        "respuesta1":"R1_2.png",
+        "respuesta2":"R2_2.png",
+        "respuesta3":"R3_2.png",
+        "respuesta4":"R4_2.png",
         "correcta":2
     },
     {
-        "pregunta":  "pregunta1.png", 
-        "respuesta1":"respuesta1.png",
-        "respuesta2":"respuesta1.png",
-        "respuesta3":"respuesta1.png",
-        "respuesta4":"respuesta1.png",
+        "pregunta":  "P3.png",
+        "respuesta1":"R1_3.png",
+        "respuesta2":"R2_3.png",
+        "respuesta3":"R3_3.png",
+        "respuesta4":"R4_3.png",
+        "correcta":4
+    },
+    {
+        "pregunta":  "P4.png",
+        "respuesta1":"R1_4.png",
+        "respuesta2":"R2_4.png",
+        "respuesta3":"R3_4.png",
+        "respuesta4":"R4_4.png",
+        "correcta":1
+    },
+    {
+        "pregunta":  "P5.png",
+        "respuesta1":"R1_5.png",
+        "respuesta2":"R2_5.png",
+        "respuesta3":"R3_5.png",
+        "respuesta4":"R4_5.png",
+        "correcta":1
+    },
+    {
+        "pregunta":  "P6.png",
+        "respuesta1":"R1_6.png",
+        "respuesta2":"R2_6.png",
+        "respuesta3":"R3_6.png",
+        "respuesta4":"R4_6.png",
+        "correcta":1
+    },
+    {
+        "pregunta":  "P7.png",
+        "respuesta1":"R1_7.png",
+        "respuesta2":"R2_7.png",
+        "respuesta3":"R3_7.png",
+        "respuesta4":"R4_7.png",
+        "correcta":2
+    },
+    {
+        "pregunta":  "P8.png",
+        "respuesta1":"R1_8.png",
+        "respuesta2":"R2_8.png",
+        "respuesta3":"R3_8.png",
+        "respuesta4":"R4_8.png",
         "correcta":3
     },
     {
-        "pregunta":  "pregunta1.png", 
-        "respuesta1":"respuesta2.png",
-        "respuesta2":"respuesta2.png",
-        "respuesta3":"respuesta2.png",
-        "respuesta4":"respuesta2.png",
+        "pregunta":  "P9.png",
+        "respuesta1":"R1_9.png",
+        "respuesta2":"R2_9.png",
+        "respuesta3":"R3_9.png",
+        "respuesta4":"R4_9.png",
         "correcta":4
+    },
+    {
+        "pregunta":  "P10.png",
+        "respuesta1":"R1_10.png",
+        "respuesta2":"R2_10.png",
+        "respuesta3":"R3_10.png",
+        "respuesta4":"R4_10.png",
+        "correcta":2
+    },
+    {
+        "pregunta":  "P11.png",
+        "respuesta1":"R1_11.png",
+        "respuesta2":"R2_11.png",
+        "respuesta3":"R3_11.png",
+        "respuesta4":"R4_11.png",
+        "correcta":1
+    },
+    {
+        "pregunta":  "P12.png",
+        "respuesta1":"R1_12.png",
+        "respuesta2":"R2_12.png",
+        "respuesta3":"R3_12.png",
+        "respuesta4":"R4_12.png",
+        "correcta":3
+    },
+    {
+        "pregunta":  "P13.png",
+        "respuesta1":"R1_13.png",
+        "respuesta2":"R2_13.png",
+        "respuesta3":"R3_13.png",
+        "respuesta4":"R4_13.png",
+        "correcta":1
     }
-    
 ]}
