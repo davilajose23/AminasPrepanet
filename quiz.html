@@ -52,7 +52,7 @@
 							<form action="#">
 								<ol>
 									<li>
-										<span id = "preguntaQuiz1" class="card-title center">¿Qué es una amina ?</span>
+										<span id = "preguntaQuiz1" class="card-title center"></span>
 										<span id = "preguntaQuiz1-img"> <img src=""> </span>
 										<p>
 											<input name="group1" type="radio" id="bp1r1" />
@@ -80,7 +80,7 @@
 									</li>
 
 									<li>
-										<span id = "preguntaQuiz2" class="card-title center">¿Qué es una amina ?</span>
+										<span id = "preguntaQuiz2" class="card-title center"></span>
 										<span id = "preguntaQuiz2-img"> <img src=""> </span>
 										<p>
 											<input name="group2" type="radio" id="bp2r1" />
@@ -107,7 +107,7 @@
 										<br>
 									</li>
 									<li>
-										<span id = "preguntaQuiz3" class="card-title center">¿Qué es una amina ?</span>
+										<span id = "preguntaQuiz3" class="card-title center"></span>
 										<span id = "preguntaQuiz3-img"> <img src=""> </span>
 										<p>
 											<input name="group3" type="radio" id="bp3r1" />
@@ -134,7 +134,7 @@
 										<br>
 									</li>
 									<li>
-										<span id = "preguntaQuiz4" class="card-title center">¿Qué es una amina ?</span>
+										<span id = "preguntaQuiz4" class="card-title center"></span>
 										<span id = "preguntaQuiz4-img"> <img src=""> </span>
 										<p>
 											<input name="group4" type="radio" id="bp4r1" />
@@ -161,7 +161,7 @@
 										<br>
 									</li>
 									<li>
-										<span id = "preguntaQuiz5" class="card-title center">¿Qué es una amina ?</span>
+										<span id = "preguntaQuiz5" class="card-title center"></span>
 										<span id = "preguntaQuiz5-img"> <img src=""> </span>
 										<p>
 											<input name="group5" type="radio" id="bp5r1" />
@@ -194,10 +194,6 @@
 					</div>
 				</div>
 
-				
-
-				
-
 				<button id="evaluar-quiz" class="btn waves-effect waves-light right green" type="submit" name="action">Evaluar
 					<i class="material-icons right">chevron_right</i>
 				</button>
@@ -208,8 +204,6 @@
 
 	</div>
 
-
-
 	<!--  Import jquery  -->
   	<script src="js/jquery-3.1.0.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
@@ -217,12 +211,19 @@
 <script>
 	// Quiz
 	getDataQuiz();
-
 	// Variables quiz
 	var preguntasQuiz;
 	var numPreguntasQuiz = [];
 	var enEsperaQuiz = false;
 	var calificacion = 100;
+	// (4 respuestas X 5 preguntas)
+	var escogidas = [
+		  [0, 0, 0, 0, 0],
+		  [0, 0, 0, 0, 0],
+		  [0, 0, 0, 0, 0],
+		  [0, 0, 0, 0, 0]
+		];
+	// (4 respuestas X 5 preguntas)
 	var respuestas = [
 		  [0, 0, 0, 0, 0],
 		  [0, 0, 0, 0, 0],
@@ -230,15 +231,15 @@
 		  [0, 0, 0, 0, 0]
 		];
 
-	  // Función que carga las preguntas del .json para el Juego 2
+	// Función que carga las preguntas del .json para el quiz
   function getDataQuiz(){
     $.ajax({
       url: 'data/quiz.json',
       type: 'GET',
       dataType: 'json',
       success: function(data){
-        preguntasQuiz = data['preguntas']; // guarda todas las preguntas en la variable preguntasJuego2
-        cargarPreguntasQuiz(); // carga una pregunta en el quiz
+        preguntasQuiz = data['preguntas']; // guarda todas las preguntas en la variable preguntasQuiz
+        cargarPreguntasQuiz(); // carga una preguntas en el quiz
       },
       error: function(errorMsg){
         console.log("Error en quiz.json"); // muestra error en la consola si no se pudo obtener juego2.json
@@ -253,25 +254,31 @@
 		numPreguntasQuiz[i] = random;
 	}
 
-	// TODO: que no se repitan
-	cargarPreguntaN(preguntasQuiz[numPreguntasQuiz[0]], 1);
-	cargarPreguntaN(preguntasQuiz[numPreguntasQuiz[1]], 2);
-	cargarPreguntaN(preguntasQuiz[numPreguntasQuiz[2]], 3);
-	cargarPreguntaN(preguntasQuiz[numPreguntasQuiz[3]], 4);
-	cargarPreguntaN(preguntasQuiz[numPreguntasQuiz[4]], 5);
-
+	// TODO: evitar que se repitan
+	cargarRespuestas(preguntasQuiz[numPreguntasQuiz[0]], 1);
+	cargarRespuestas(preguntasQuiz[numPreguntasQuiz[1]], 2);
+	cargarRespuestas(preguntasQuiz[numPreguntasQuiz[2]], 3);
+	cargarRespuestas(preguntasQuiz[numPreguntasQuiz[3]], 4);
+	cargarRespuestas(preguntasQuiz[numPreguntasQuiz[4]], 5);
   }
 
-  function cargarPreguntaN(pregunta, numPregunta) {
+  // carga las respuestas para una pregunta dada
+  function cargarRespuestas(pregunta, numPregunta) {
+  	// agregar la respuesta correcta a la matriz de respuestas
   	respuestas[pregunta.correcta - 1][numPregunta - 1] = 1;
+  	// limpiar elementos de la pregunta anterior
 	$("#preguntaQuiz"+ numPregunta).html("");
 	$( ".respuestaP" + numPregunta).each(function() {
 	  $( this ).html( "" );
 	});
-	$("#preguntaQuiz"+numPregunta+"-img > img").each(function() {
-		$( this ).attr('src', "");
+	$("#preguntaQuiz"+numPregunta+"-img >img").each(function() {
+		$( this ).attr('src', '');
+	});
+	$(".responsive-img-quiz"+numPregunta).each(function() {
+		$( this ).attr('src', '');
 	});
 
+	// revisar de que tipo son las preguntas y respuestas
 	if (pregunta.tipoPregunta == "imagen") {
 		$("#preguntaQuiz"+numPregunta+"-img > img").attr('src', 'img/quiz/' + pregunta["pregunta"]);
 		for (var i = 1; i <= 4; i++) {
@@ -300,13 +307,16 @@ $("#evaluar-quiz").click(function(){
 });
 
 function evaluarQuiz() {
-    var escogidas = [
+	// (4 respuestas X 5 preguntas)
+    escogidas = [
 	  [0, 0, 0, 0, 0],
 	  [0, 0, 0, 0, 0],
 	  [0, 0, 0, 0, 0],
 	  [0, 0, 0, 0, 0]
 	];
 
+	// se revisa el valor de cada radiobutton para cada pregunta
+	// si esta prendida se pone 1 en la casilla de la matriz
 	for( var i = 0; i < 5; i++) {
 		var radios = document.getElementsByName( "group" +  (i+1).toString());
 		for ( var j = 0; j < 4; j++) {
@@ -316,6 +326,7 @@ function evaluarQuiz() {
 		}
 	}
 
+	// se comparan las matrices de respuestas con la de escogidas
 	var equivocada = false;
 	for(var i = 0; i < 5; i++) {
 		for(var j = 0; j < 4; j++) {
@@ -324,11 +335,40 @@ function evaluarQuiz() {
 			}
 		}
 		if(equivocada) {
-			calificacion -= 10;
+			calificacion -= 20;
+			equivocada = false;
 		}
 	}
 	alert(calificacion);
+
+	resetQuiz();
+}
+
+function resetQuiz() {
+
 	calificacion = 100;
+	
+	escogidas = [
+		  [0, 0, 0, 0, 0],
+		  [0, 0, 0, 0, 0],
+		  [0, 0, 0, 0, 0],
+		  [0, 0, 0, 0, 0]
+		];
+	respuestas = [
+		  [0, 0, 0, 0, 0],
+		  [0, 0, 0, 0, 0],
+		  [0, 0, 0, 0, 0],
+		  [0, 0, 0, 0, 0]
+		];
+
+	// se apagan los radiobuttons
+   for( var i = 0; i < 5; i++) {
+		var radios = document.getElementsByName( "group" +  (i+1).toString());
+		for ( var j = 0; j < 4; j++) {
+			radios[j].checked = false;
+		}
+	}
+	cargarPreguntasQuiz();
 }
 
 </script>
