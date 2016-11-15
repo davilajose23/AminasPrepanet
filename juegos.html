@@ -722,8 +722,6 @@ function cargaPreguntasJuego2(){
     $("#preguntaJuego2 >h4").html(preguntasJuego2[numPreguntaJuego2].pregunta);
   }
 
-  
-
   // agrega cada uno de los tags a las opciones de respuestas
   $.each(tags, function(i, val){
      $("#unselectedChips").append('<div class="chip hoverable chip-unselected animated fadeIn">' + val.tag + '</div>');
@@ -739,8 +737,6 @@ function cargaPreguntasJuego3() {
 
   numPreguntaJuego3 = Math.floor((Math.random() * preguntasJuego3.length) + 0);
 
-  alert(numPreguntaJuego3);
-  alert(preguntasJuego3[numPreguntaJuego3].pregunta);
   $("#preguntaJuego3 >div >img").attr('src', 'img/juego3/' + preguntasJuego3[numPreguntaJuego3].pregunta);
 
   p = preguntasJuego3[numPreguntaJuego3];
