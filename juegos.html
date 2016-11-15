@@ -49,33 +49,16 @@
     <!--/End Tabs -->
 
     <!-- Game Selector -->
-    <div id="test2" class="col s12" >
+    <div id="test2" class="col s12 center" >
       <!-- Seleccionar Game 1 -->
-      <div class="col s12 m4 animated fadeIn" id="tab1"> 
-        <div class="card grey lighten-5 waves-effect hoverable active " >
-          <div class="card-content ">
-            <span class="card-title">Adivina la estructura</span>
-          </div>
-        </div>
-      </div>
+      <a class="waves-effect waves-light btn-large animated fadeIn" id="tab1">Adivina la estructura</a>
       <!-- Seleccionar Game 2 -->
-      <div class="col s12 m4 animated fadeIn" id="tab2"> 
-        <div class="card grey lighten-5 waves-effect hoverable ">
-          <div class="card-content ">
-            <span class="card-title">Adivina el nombre</span>
-          </div>
-        </div>
-      </div>
+      <a class="waves-effect waves-light btn-large animated btn-flat fadeIn" id="tab2">Adivina el nombre</a>
+      
       
       <!-- Seleccionar Game 3 -->
-      <div class="col s12 m4 animated fadeIn" id="tab3"> 
-        <div class="card grey lighten-5 waves-effect hoverable">
-          <div class="card-content ">
-            <span class="card-title">Completa la reacción</span>
-          </div>
-        </div>
-      </div>
-
+      <a class="waves-effect waves-light btn-large animated btn-flat fadeIn" id="tab3">Completa la reacción</a>
+      
     </div>
     <!--/End Game Selector -->
     
@@ -492,6 +475,9 @@
     animacion("#juego3", "zoomOut", 400); // Animación de salida Juego 3
     $("#juego1").show(); // Muestra Juego 1
     juegoActivo = 1; // Cambia el juego activo a 1
+    $("#tab1").removeClass("btn-flat");
+    $("#tab2").addClass("btn-flat");
+    $("#tab3").addClass("btn-flat");
 
   });
 
@@ -502,6 +488,10 @@
     $("#juego2").show(); // Muestra Juego 2
     juegoActivo = 2; // Cambia el juego activo a 2
 
+    $("#tab2").removeClass("btn-flat");
+    $("#tab1").addClass("btn-flat");
+    $("#tab3").addClass("btn-flat");
+
   });
 
   // Función Cuando se selecciona Juego 3
@@ -511,6 +501,9 @@
     $("#juego3").show(); // Muestra Juego 3
     juegoActivo = 3; // Cambia el juego activo a 3
 
+    $("#tab3").removeClass("btn-flat");
+    $("#tab2").addClass("btn-flat");
+    $("#tab1").addClass("btn-flat");
   });
 
   // =================================================== SONIDO ==============================================
