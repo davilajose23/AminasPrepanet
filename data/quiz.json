@@ -14,7 +14,7 @@
         "respuesta1":"CH<sub>3</sub>CH(NH<sub>2</sub>)COOH",
         "respuesta2":"CH<sub>3</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)COOH",
         "respuesta3":"CH<sub>3</sub>CH(CH<sub>3</sub>)CH<sub>2</sub>CH(NH<sub>2</sub>)COOH",
-        "respuesta4":"R4_2.png",
+        "respuesta4":"CH<sub>8</sub>CH(CH<sub>7</sub>)CH<sub>6</sub>CH(NH<sub>5</sub>)COOH",
         "correcta":1,
         "tipoPregunta": "texto",
         "tipoRespuesta": "texto"

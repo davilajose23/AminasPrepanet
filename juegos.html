@@ -241,6 +241,7 @@
               <!--  Vidas -->
               <span class="right" id="juego3Vidas"><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i><i class="material-icons icon-red">favorite</i> 
 
+
                 <!--  Info -->
                 <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-html="true" data-tooltip="Arrastra la respuesta al lugar que se indica">info</i></span>
 
@@ -952,6 +953,7 @@ function buttonJuego2(){
     for (var i = 0; i < preguntasJuego2[numPreguntaJuego2].respuesta.length ; i++) {
       ans += preguntasJuego2[numPreguntaJuego2].respuesta[i].tag;
     }
+
     $("#respuestaJuego2").html("<strong>Respuesta:</strong> " + ans );
     enEsperaJuego2 = true;
     $("#evaluarJuego2").html("continuar");
@@ -1006,6 +1008,7 @@ $("#juego3Continuar").click(function() {
 
 function evaluaJuego3(respuestaJ3) {
 
+  // si es correcta
   if(preguntasJuego3[numPreguntaJuego3].correcta == respuestaJ3) {
 
     modalSuccess();
@@ -1024,28 +1027,29 @@ function evaluaJuego3(respuestaJ3) {
     $(".droppable").eq(0).children().removeClass("light-blue").addClass("grey");
     cargaPreguntasJuego3();
 
-
-
     return true;
- 
+  // si es incorrecta
   } else {
     juego3Vidas --;
-    
-    if (juego3Vidas <= 0) {
-      
-      $(".juego3Respuesta").eq(preguntasJuego3[numPreguntaJuego3]['correcta'] - 1).removeClass( "red" ).addClass("green");
-    
 
-      if(sonido){
-        $.playSound("sounds/error");
-      }
-        //quita vidas
+            //quita vidas
       $("#juego3Vidas").children().eq(0).addClass("fadeOut").delay(1600).queue(function(next){
         //$(this).removeClass("bounceOut");
         $("#juego3Vidas").children()[0].remove();
         next();
       });
-     //cambia los colores a las respuestas
+    
+    // si ya no quedan vidas
+    if (juego3Vidas <= 0) {
+      
+      $(".juego3Respuesta").eq(preguntasJuego3[numPreguntaJuego3]['correcta'] - 1).removeClass( "red" ).addClass("green");
+      //$(".juego3Respuesta").eq(preguntasJuego3[numPreguntaJuego3]['correcta'] - 1).removeClass( "grey" ).addClass("green");
+      
+      if(sonido){
+        $.playSound("sounds/error");
+      }
+
+     
       $(".juego3Respuesta").each(function() {
         $( this ).removeClass( "blue-grey lighten-4" ).addClass("red incorrecta");
       });
@@ -1057,11 +1061,10 @@ function evaluaJuego3(respuestaJ3) {
 
       resetJuego3();
        
+    // si todavia quedan vidas
     } else {
 
       modalError();
-      $(".juego3Respuesta").eq(preguntasJuego3[numPreguntaJuego3]['correcta'] - 1).removeClass( "red" ).addClass("green");
-      
       if(sonido){
         $.playSound("sounds/error");
       }
@@ -1071,16 +1074,12 @@ function evaluaJuego3(respuestaJ3) {
       $(".juego3Respuesta >img").eq(2).draggable('disable');
       $(".juego3Respuesta >img").eq(3).draggable('disable');
 
-      //quita vidas
-      $("#juego3Vidas").children().eq(0).addClass("fadeOut").delay(1600).queue(function(next){
-        //$(this).removeClass("bounceOut");
-        $("#juego3Vidas").children()[0].remove();
-        next();
-      });
-       //cambia los colores a las respuestas
-      $(".juego3Respuesta").each(function() {
-        $( this ).removeClass( "blue-grey lighten-4" ).addClass("red incorrecta");
-      });
+
+      //cambia los colores a las respuestas
+       //$(".juego3Respuesta").eq(respuestaJ3 - 1).removeClass("blue-grey lighten-4" ).addClass("red incorrecta");
+       $(".juego3Respuesta").eq(preguntasJuego3[numPreguntaJuego3]['correcta'] - 1).removeClass( "blue-grey lighten-4" ).addClass("green");
+       
+
       $("#juego3Continuar").show();
       enEsperaJuego3 = true;
       return false;
