@@ -445,8 +445,6 @@
       for(var i = 0; i < colores.length ; i++){
          ui.item.removeClass(colores[i]);
       }
-      
-      
     }
   });
 
@@ -457,18 +455,14 @@
   $(document).keyup(function(e){
     if((e.keyCode ==  13 || e.keyCode ==  32) && juegoActivo == 2) {
       buttonJuego2();
-
     }else if ((e.keyCode ==  13 || e.keyCode ==  32) && juegoActivo == 1) {
       clickJuego1Continuar();
     } else if ((e.keyCode ==  13 || e.keyCode ==  32) && juegoActivo == 3) {
-
       if ($('#juego3Continuar').is(":visible")) {
         $('#juego3Continuar').trigger('click');
       }
     }
   });
-
-  
 
   // ============================================ SELECCIÓN  DE JUEGO ==============================================
  
@@ -673,10 +667,6 @@
     });
   }
 
-
-
-
-
 // ================================================== CARGA PREGUNTAS ==============================================
 
 // Función que carga una pregunta en juego 1
@@ -754,25 +744,25 @@ function cargaPreguntasJuego2(){
    });
 
   $("#juego2Score").html(juego2Score); // Actualiza el score
-  
-
 }
+
 
 // Función que carga una pregunta en juego 3
 function cargaPreguntasJuego3() {
  $("#juego3Continuar").hide();
-  // TODO: animaciones
 
   numPreguntaJuego3 = Math.floor((Math.random() * preguntasJuego3.length) + 0);
 
+  alert(numPreguntaJuego3);
+  alert(preguntasJuego3[numPreguntaJuego3].pregunta);
   $("#preguntaJuego3 >div >img").attr('src', 'img/juego3/' + preguntasJuego3[numPreguntaJuego3].pregunta);
 
   p = preguntasJuego3[numPreguntaJuego3];
 
-  $(".juego3Respuesta >img").eq(1).attr('src', 'img/juego3/' + p['respuesta1']);
-  $(".juego3Respuesta >img").eq(2).attr('src', 'img/juego3/' + p['respuesta2']);
-  $(".juego3Respuesta >img").eq(3).attr('src', 'img/juego3/' + p['respuesta3']);
-  $(".juego3Respuesta >img").eq(4).attr('src', 'img/juego3/' + p['respuesta4']);
+  $(".juego3Respuesta >img").eq(0).attr('src', 'img/juego3/' + p['respuesta1']);
+  $(".juego3Respuesta >img").eq(1).attr('src', 'img/juego3/' + p['respuesta2']);
+  $(".juego3Respuesta >img").eq(2).attr('src', 'img/juego3/' + p['respuesta3']);
+  $(".juego3Respuesta >img").eq(3).attr('src', 'img/juego3/' + p['respuesta4']);
 
   $(".juego3Respuesta >img").eq(0).draggable('enable');
   $(".juego3Respuesta >img").eq(1).draggable('enable');
@@ -839,7 +829,6 @@ function resetJuego3() {
 
   $("#juego3Continuar").hide();
 
- // reacomodaJuego3();
 }
 
 
@@ -1153,10 +1142,7 @@ $( function() {
       .addClass("grey");
     },
     drop: function( event, ui ) {
-
-      //alert(ui.draggable.attr("data-num"));
       evaluaJuego3(ui.draggable.attr("data-num"));
-      
     }
   });
 
