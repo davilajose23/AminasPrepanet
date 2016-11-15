@@ -81,7 +81,7 @@
             
             <!-- Vidas e Info -->
             <span class="right" id="juego1Vidas"> 
-              <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Selecciona la respuesta correcta" >info</i>
+              <i class="material-icons cyan-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Selecciona la respuesta correcta">info</i>
             </span>
           </p>
           <!--/End Seccion de Sonido, Score, Vidas e Info  -->
@@ -373,6 +373,7 @@
   var juego1Score = 0;
   var juego1Vidas = 5;
   var numPreguntaJuego1;
+  var juego1TopScore = 0;
 
   // variables globales Juego 2
   var preguntasJuego2;
@@ -381,6 +382,7 @@
   var enEsperaJuego2 = false;
   var juego2Vidas = 5;
   var colores = ["pink", "green", "red", "blue", "indigo", "teal", "cyan",  "light-blue", "light-green", "orange", "amber", "deep-orange", "blue-grey"];
+  var juego2TopScore = 0;
 
   // variables globales Juego 3
   var preguntasJuego3;
@@ -388,6 +390,7 @@
   var juego3Score = 0;
   var enEsperaJuego3 = false;
   var juego3Vidas = 5;
+  var juego3TopScore = 0;
 
   var contadorPreguntas = 1 ; // nose si se usa en algun lado
 
@@ -560,6 +563,17 @@
         showConfirmButton:false
         //background: 'rgba(0,0,0,0)'
       }).done();
+  }
+
+  function modalScore(puntaje){
+    swal({
+      title: 'Puntuación Máxima',
+      text: puntaje.toString(),
+      imageUrl: 'http://olegif.com/bin/gifs/00/15/87.gif',
+      imageWidth: 400,
+      imageHeight: 200,
+      animation: false
+    })
   }
 
   // Funcion que activa o desactiva el sonido del juego
@@ -882,9 +896,13 @@ $(".juego1Respuesta").click(function (){
         $("#juego1Continuar").show();
         enEspera = true;
         if (juego1Vidas == 0){
-          reset();
-          $('#juego1TopScore').openModal();
           
+          if (juego1Score > juego1TopScore )
+            juego1TopScore = juego1Score;
+
+          modalScore(juego1TopScore)
+
+          reset();
         }
      }
     contadorPreguntas ++;
@@ -903,6 +921,11 @@ function buttonJuego2(){
 
     if(juego2Vidas == 0){
       //modal ya perdio
+      if (juego2Score > juego2TopScore )
+            juego2TopScore = juego2Score;
+
+      modalScore(juego2TopScore)
+
       resetJuego2();
       //alert("ya perdio");
     }
@@ -1009,8 +1032,7 @@ function evaluaJuego3(respuestaJ3) {
     juego3Vidas --;
     
     if (juego3Vidas <= 0) {
-      $('#juego3TopScoreText').html(juego3Score);
-      $('#juego3TopScore').openModal();  
+      
       $(".juego3Respuesta").eq(preguntasJuego3[numPreguntaJuego3]['correcta'] - 1).removeClass( "red" ).addClass("green");
     
 
@@ -1027,6 +1049,12 @@ function evaluaJuego3(respuestaJ3) {
       $(".juego3Respuesta").each(function() {
         $( this ).removeClass( "blue-grey lighten-4" ).addClass("red incorrecta");
       });
+      
+      if (juego3Score > juego3TopScore )
+            juego3TopScore = juego3Score;
+
+      modalScore(juego3TopScore)
+
       resetJuego3();
        
     } else {
