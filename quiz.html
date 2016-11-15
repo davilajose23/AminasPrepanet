@@ -8,6 +8,8 @@
 
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.min.css">
+	<!--  Import sweet alert -->
+  	<link rel="stylesheet" href="css/sweetalert2.min.css">
 
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -207,6 +209,8 @@
 	<!--  Import jquery  -->
   	<script src="js/jquery-3.1.0.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<!--Import sweetalertjs-->
+  	<script type="text/javascript" src="js/sweetalert2.min.js"></script>
 
 <script>
 	// Quiz
@@ -339,7 +343,7 @@ function evaluarQuiz() {
 			equivocada = false;
 		}
 	}
-	alert(calificacion);
+	modalScore(calificacion);
 
 	resetQuiz();
 }
@@ -370,6 +374,17 @@ function resetQuiz() {
 	}
 	cargarPreguntasQuiz();
 }
+
+function modalScore(puntaje){
+    swal({
+      title: 'Calificación',
+      text: puntaje.toString(),
+      imageUrl: 'http://olegif.com/bin/gifs/00/15/87.gif',
+      imageWidth: 400,
+      imageHeight: 200,
+      animation: false
+    })
+  }
 
 </script>
 
