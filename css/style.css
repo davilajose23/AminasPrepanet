@@ -112,3 +112,7 @@ th{
 .blue-navbar {
     background-color: #0678CB !important;
 }
+
+a > i {
+ vertical-align: middle !important; 
+}
