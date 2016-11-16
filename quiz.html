@@ -52,7 +52,7 @@
 					<div class="card grey lighten-5 ">
 						<div class="card-content  ">
 							<form action="#">
-								<ol>
+								<ol >
 									<li>
 										<span id = "preguntaQuiz1" class="card-title center"></span>
 										<span id = "preguntaQuiz1-img"> <img src=""> </span>
@@ -200,6 +200,8 @@
 					<i class="material-icons right">chevron_right</i>
 				</button>
 
+
+
 			</div>
 
 		</div>
@@ -220,6 +222,7 @@
 	var numPreguntasQuiz = [];
 	var enEsperaQuiz = false;
 	var calificacion = 100;
+	var continuar = false;
 	// (4 respuestas X 5 preguntas)
 	var escogidas = [
 		  [0, 0, 0, 0, 0],
@@ -252,6 +255,14 @@
   }
 
   function cargarPreguntasQuiz() {
+  	// se asegura de que los radiobuttons esten apagados
+   for( var i = 0; i < 5; i++) {
+		var radios = document.getElementsByName( "group" +  (i+1).toString());
+		for ( var j = 0; j < 4; j++) {
+			radios[j].checked = false;
+		}
+	}
+  	continuar = false;
   	for(var i = 0; i < 5; i++) {
 	  	// obtiene un numero random para la siguiente pregunta
 		var random = Math.floor((Math.random() * preguntasQuiz.length) + 0);
@@ -305,9 +316,18 @@
 	}
 }
 
-
+// cuando se evalua se muestran las respuestas
+// despues se puede cargar otro quiz
 $("#evaluar-quiz").click(function(){
+	if (continuar) {
+		$("#evaluar-quiz").html("");
+		$("#evaluar-quiz").html("Evaluar");
+		resetQuiz();
+	} else {
+		$("#evaluar-quiz").html("");
+		$("#evaluar-quiz").html("Continuar");
       	evaluarQuiz();
+	}
 });
 
 function evaluarQuiz() {
@@ -345,7 +365,22 @@ function evaluarQuiz() {
 	}
 	modalScore(calificacion);
 
-	resetQuiz();
+	mostrarCorrectas();
+
+	//resetQuiz();
+}
+
+function mostrarCorrectas() {
+	//alert("correctas");
+	for( var i = 0; i < 5; i++) {
+		var radios = document.getElementsByName( "group" +  (i+1).toString());
+		for ( var j = 0; j < 4; j++) {
+			if(respuestas[j][i] == 1) {
+				radios[j].checked = true;
+			}
+		}
+	}
+	continuar = true;
 }
 
 function resetQuiz() {
@@ -378,7 +413,7 @@ function resetQuiz() {
 function modalScore(puntaje){
     swal({
       title: 'Calificación',
-      text: puntaje.toString(),
+      text: puntaje.toString()+"\n"+"Mira las respuestas correctas",
       imageUrl: 'http://olegif.com/bin/gifs/00/15/87.gif',
       imageWidth: 400,
       imageHeight: 200,
@@ -387,7 +422,6 @@ function modalScore(puntaje){
   }
 
 </script>
-
 
 </body>
 </html>
